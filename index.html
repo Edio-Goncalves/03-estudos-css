@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div>
+      <p class="separador">LINKS DE VÍDEO CURSO E DOCUMENTAÇÃO</p>
+      <a href="https://www.w3schools.com/cssref/">Propriedades do CSS</a>
+      <div>
+        <p class="separador">CSS Inline, Interno e externo</p>
+        <h2>CSS Inline</h2>
+        <p style="color: red">
+          É quando colocamos o CSS no "body" da página, abrimos um "style" na
+          "tag" e colocamos a propriedade css.
+        </p>
+        <textarea name="" id="" cols="80" rows="5">
+    <p style="color: red">
+          É quando colocamos o CSS no "body" da página, abrimos um "style" e
+          colocamos a propriedade css.
+    </p>
+      </textarea
+        >
+        <h2>CSS Interno</h2>
+        <p>
+          É quando colocamos o CSS no "head" da página, abrimos um "style" e
+          colocamos as propriedade css dentro.
+        </p>
+        <textarea name="" id="" cols="80" rows="8">
+  <head>
+        <style>
+            body{
+                background-color: black;
+            }
+        </style>
+  </head>
+      </textarea
+        >
+        <h2>CSS Externo</h2>
+        <p>
+          Criamos um novo arquivo chamado "style.css" onde linkamos ao nosso
+          head para ser a fonte da nossa estilização em CSS.
+        </p>
+        <textarea name="" id="" cols="80" rows="4">
+  <head>
+        <link rel="stylesheet" href="style.css" />
+  </head>
+      </textarea
+        >
+      </div>
+      <div>
+        <p class="separador">Class (.) e ID (#)</p>
+        <a
+          href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors"
+          >Documentação AQUI</a
+        >
+        <p>
+          Vamos criar identificadores para colocar nos elemento ondem compõem a
+          mesma "tag". Ex: tenho 4 paragrafos mas que modificar apenas o estilo
+          de um deles. <br />
+          <br />
+          O ID é identificado com "#", já a class com ".", quando nao colocamos
+          nada o CSS tenta encontrar uma "tag" no HTML. <br />
+          <br />
+          O ID podemos usar em apenas um elemento, já a class podemos usar em
+          vários elementos, então quando precisarmos repetir a estilização vamo
+          usar class.
+        </p>
+      </div>
+      <div>
+        <p class="separador">border, margin e padding</p>
+        <h2>Border</h2>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/border"
+          >Documentação AQUI</a
+        >
+        <br /><br />
+        <textarea name="" id="" cols="90" rows="29">
+
+    .border{
+        border-width: 1px; <!-- para dar espessura para a borda -->
+        border-style: solid; <!-- linha solida na borda -->
+        border-color: blue;
+        border-radius: 10px; <!-- para suavizar a borda (arrendodar) -->
+    }
+    .dotted{
+        border-style: dotted; <!-- pontilhado -->
+    }
+    .dashed{
+        border-style: dashed; <!-- tracejado -->
+    }
+    .none{
+        border-style: none; <!-- aqui a borda é retirada -->
+    }
+    .hidden{
+        border-style: hidden; <!-- o elemento está na tela mas não esta aparecendo -->
+    }
+    .borderSimples{
+        border: 20px dashed red;
+    }
+    .borderVariasEspessuras{
+        border-width: 5px 10px 15px 5px; 
+        border-style: solid;
+        border-color: red black blue green;
+    }
+
+        </textarea>
+        <h2>Margin e Padding</h2>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/margin"
+          >Documentação margin AQUI</a
+        ><br /><br />
+        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/padding"
+          >Documentação padding AQUI</a
+        >
+        <br /><br />
+
+        <textarea name="" id="" cols="80" rows="5">
+    .container{
+        margin-top: 10px; <!-- distância o elemento de outro elemento  -->
+        padding: 20px;  <!-- distância dentro do próprio elemento -->
+    }
+        </textarea>
+      </div>
+      <div>
+        <p class="separador">box model</p>
+        <a
+          href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model"
+          >Documentação AQUI</a
+        >
+        <p>
+          Cada adição de BORDER, PADDING e MARGIN, modifica o tamanho do
+          elemento para fora do elemento e para não modificar o tamanho do
+          elemento com adição de BORDER, PADDING e MARGIN, vamos colocar um
+          <code>"box-sizing: border-box"</code>, onde vai ajustar tudo para
+          dentro do elemento.
+        </p>
+        <div class="container2">Diferença para fora</div>
+        <br />
+        <div class="container3">Diferença para dentro</div>
+        <br />
+        <textarea name="" id="" cols="120" rows="19">
+    <style>
+        .container2{
+            padding: 10px;
+            width: 100px;
+            height: 100px;
+            background-color: rgb(208, 255, 0);
+            border: 10px solid blue;
+        }
+        .container3{
+            padding: 10px;
+            width: 100px;
+            height: 100px;
+            background-color: rgb(208, 255, 0);
+            border: 10px solid blue;
+
+            box-sizing: border-box; /* Vai manter os 100px e jogar toda diferença para dentro do elemento */
+        } 
+    </style>
+        </textarea>
+      </div>
+      <div>
+        <p class="separador">Unidades de media</p>
+        <div class="paragrafoInline">
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Values_and_units"
+            >Documentação AQUI</a
+          >
+          <br /><br />
+          <p class="titulo">UNIDADES DE MEDIDAS FIXAS (<b>ABSOLUTAS</b>)</p>
+          <br />
+          <div id="cm"></div>
+          <p>cm = Centimetros</p>
+          <br />
+          <div id="mm"></div>
+          <p>mm = milimetros (10 milimetros = 1 centimetro)</p>
+          <br />
+          <div id="in"></div>
+          <p>in = polegadas ( 1 polegada = 2,54cm)</p>
+          <br />
+          <div id="px"></div>
+          <p>px = pixel</p>
+          <br />
+          <div id="pt"></div>
+          <p>
+            pt = ponto ( ponto em quantidade fica maior que pixel, mas se for
+            baixa fica do tamanho do pixel
+          </p>
+          <br />
+          <div id="pc"></div>
+          <p>pc = picas ( 1 pica = 12 pontos)</p>
+          <br /><br />
+
+          <p class="titulo">
+            UNIDADES DE MEDIDAS DE REFERENCIA (<b>RELATIVAS</b>)
+          </p>
+          <br />
+          texto no body (vem como default 16px)
+          <br /><br />
+          <p class="titulo">unidades "em" e "rem"</p>
+          <p>(são unidades em relação a fonte do elemento pai)</p>
+          <div class="container">
+            Texto na class container.
+            <div class="inside_em">Texto na class inside_em.</div>
+            <div class="inside_rem">Texto na class inside_rem.</div>
+          </div>
+          <br /><br />
+
+          <p class="titulo">unidades "vw"</p>
+          <p>
+            (unidade de medida em relção a modificação da largura da janela do
+            html, 1vw = 1%)
+          </p>
+          <div class="container_vw">
+            Texto na class container_vw.
+            <div class="inside">Texto na class inside.</div>
+          </div>
+
+          <p class="titulo">unidades "vh"</p>
+          <p>
+            (unidade de medida em relção a modificação da altura da janela do
+            html, porem o efeito é na largura 1vh = 1%)
+          </p>
+          <div class="container_vh">
+            Texto na class container_vh.
+            <div class="inside">Texto na class inside.</div>
+          </div>
+
+          <p class="titulo">unidades "vmin"</p>
+          <p>
+            (unidade de medida em relção ao menor tamanho da janela do html
+            sendo altura ou largura, 1vmin = 1%)
+          </p>
+          <div class="container_vmin">
+            Texto na class container_vmin.
+            <div class="inside">Texto na class inside.</div>
+          </div>
+
+          <p class="titulo">unidades "vmax"</p>
+          <p>(é o inverso do vmin, 1vmax = 1%)</p>
+          <div class="container_vmax">
+            Texto na class container_vmax.
+            <div class="inside">Texto na class inside.</div>
+          </div>
+
+          <p class="titulo">unidades "porcento"</p>
+          <p>
+            (unidade de medida em relção ao elemento "pai" baseando-se na %
+            (neste exemplo o elemento pai é o body))
+          </p>
+          <div class="container_porcento">
+            Texto na class container_porcento.
+            <div class="inside">Texto na class inside.</div>
+          </div>
+          <br />
+          <textarea name="" id="" cols="130" rows="53">
+    #cm{
+        width: 1cm;
+        height: 1cm;
+    }
+    #mm{
+        width: 5mm;
+        height: 5mm;
+    }
+    #in{
+        width: 1in;
+        height: 1in;
+    }
+    #px{
+        width: 10px;
+        height: 10px;
+    }
+    #pt{
+        width: 10pt;
+        height: 10pt;
+    }
+    #pc{
+        width: 1pc;
+        height: 1pc;
+    }
+    #em{ <!-- em = tamanho do elemento fonte (elemento pai), 2 "em" duplica, 3 "em" triplica ... -->
+        font-size: 2em; <!-- O valor de "em" é multiplicado pelo valor do font-size do "pai" do elemento -->
+        width: 4em; <!-- unidade "em" é sempre relacionada ao tamanho da font-size do "pai" -->
+        background:blue; <!-- tamanho do background: 25px (font-size pai) * 2em (font-size filho) * 6em (width filho) = 200px -->
+    }
+    #rem{ <!-- rem = tamanho do elemento raiz (do HTML inteiro), 2 "em" duplica, 3 "em" triplica ... -->
+        font-size: 1rem; <!-- O valor de "rem" é multiplicado pelo valor do font-size da "raiz" do elemento -->
+    }
+    #vw{ <!-- unidade de medida em relção a modificação da largura da janela do html -->
+        font-size: 30px;
+        width: 50vw;
+    }
+    #vh{ <!-- unidade de medida em relção a modificação da altura da janela do html, porem o efeito é na largura --> 
+        font-size: 20px;
+        width: 50vh;
+    }
+    #vmin{ <!-- unidade de medida em relção ao menor tamanho da janela do html sendo altura ou largura --> 
+        font-size: 20px;
+        width: 50vmin;
+    }
+    #vmax{ <!-- unidade de medida em relção ao maior tamanho da janela do html sendo altura ou largura --> 
+        font-size: 20px;
+        width: 40vmax;
+    }
+    #porcento{ <!-- unidade de medida em relção ao elemento "pai" baseando-se na % (neste exemplo o elemento pai é o body) --> 
+        width: 80%;
+        height: 50%;
+    }
+        </textarea
+          >
+        </div>
+      </div>
+      <div>
+        <p class="separador">text transform & text decoration</p>
+        <a
+          href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-transform"
+          >Documentação text-transform AQUI</a
+        ><br /><br />
+        <a
+          href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration"
+          >Documentação text-decoration AQUI</a
+        >
+        <p class="center">
+          What is Lorem Ipsum? <br />
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since the 1500s, when an unknown printer took a galley of type and
+          scrambled it to make a type specimen book.
+        </p>
+        <p class="justify">
+          What is Lorem Ipsum? <br />
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since the 1500s, when an unknown printer took a galley of type and
+          scrambled it to make a type specimen book.
+        </p>
+        <p class="uppercase">
+          What is Lorem Ipsum? <br />
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since the 1500s, when an unknown printer took a galley of type and
+          scrambled it to make a type specimen book.
+        </p>
+        <p class="lowercase">
+          What is Lorem Ipsum? <br />
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since the 1500s, when an unknown printer took a galley of type and
+          scrambled it to make a type specimen book.
+        </p>
+        <p class="capitalize">
+          What is Lorem Ipsum? <br />
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since the 1500s, when an unknown printer took a galley of type and
+          scrambled it to make a type specimen book.
+        </p>
+        <p class="indent">
+          What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing
+          and typesetting industry. Lorem Ipsum has been the industry's standard
+          dummy text ever since the 1500s, when an unknown printer took a galley
+          of type and scrambled it to make a type specimen book.
+        </p>
+        <p>
+          <a class="link" href=""
+            >link vem por default "text-decoration: underline", para tirar o
+            underline aplicamos um "none"</a
+          >
+        </p>
+        <textarea name="" id="" cols="120" rows="32">
+    .center{
+        color: red;
+        text-align: center; <!-- Para centralizar, podemos justificar para direita, esquerda, etc. -->
+        text-decoration: underline; <!-- linha em baixo --> 
+        letter-spacing: 1.8px; <!-- espaço entre as letras --> 
+    }
+    .justify{
+        text-align: justify;
+        text-decoration: line-through; <!-- riscado --> 
+        line-height: 30px; <!-- altura da linha fixada em pixels --> 
+    }
+    .uppercase{
+        text-transform: uppercase;
+        text-decoration: overline; <!-- linha em cima --> 
+        line-height: 1.8; <!-- altura da linha multiplicando pelo tamanho da fonte --> 
+    }
+    .lowercase{
+        text-transform: lowercase; <!-- todo em caixa alta --> 
+        text-decoration: underline overline; <!-- da para aplicar mais de um text-decoration --> 
+        word-spacing: 15px; <!-- espaço entre as palavras --> 
+    }
+    .capitalize{
+        text-transform: capitalize; <!-- para por toda primeira letra de cada palavra em maiuscula --> 
+        text-shadow: 2px 2px 5px black; <!-- deslocamento para direita, deslocamento para baixo, desfoque e cor --> 
+    }
+    .indent{
+        text-indent: 30px; <!-- identa o início de cada paragrafo -->
+    }
+    .link{
+        text-decoration: none; <!-- para retirar o style padrão do link -->
+    }        
+        </textarea>
+      </div>
+      <div>
+        <p class="separador">font</p>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font"
+          >Documentação AQUI</a
+        ><br /><br />
+        <p class="fontSerif">
+          What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing
+          and typesetting industry. Lorem Ipsum has been the industry's standard
+          dummy text ever since the 1500s, when an unknown printer took a galley
+          of type and scrambled it to make a type specimen book. It has survived
+          not only five centuries.
+        </p>
+        <p class="fontSansSerif">
+          What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing
+          and typesetting industry. Lorem Ipsum has been the industry's standard
+          dummy text ever since the 1500s, when an unknown printer took a galley
+          of type and scrambled it to make a type specimen book. It has survived
+          not only five centuries.
+        </p>
+        <p class="fontMonoSpace">
+          What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing
+          and typesetting industry. Lorem Ipsum has been the industry's standard
+          dummy text ever since the 1500s, when an unknown printer took a galley
+          of type and scrambled it to make a type specimen book. It has survived
+          not only five centuries.
+        </p>
+        <p class="fontVariant">
+          What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing
+          and typesetting industry. Lorem Ipsum has been the industry's standard
+          dummy text ever since the 1500s, when an unknown printer took a galley
+          of type and scrambled it to make a type specimen book. It has survived
+          not only five centuries.
+        </p>
+        <textarea name="" id="" cols="120" rows="17">
+    .fontSerif{ <!-- cantos das fontes com pontas -->
+        font-family: 'Times New Roman', Times, serif;
+        font-style: italic; <!-- Deixar a fonte em italico -->
+    }
+    .fontSansSerif{ <!-- fonte lisas, arredondadas -->
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 22px; <!-- para mudar tamanho da fonte e podemos usar todas unidades de medidas nela -->
+    }
+    .fontMonoSpace{ <!-- fonte onde todos os caracteres ocupam o mesmo espaço -->
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: bold;  <!-- colocar em negrito, para estar modificando o negrito em valor, ex: "font-weight: 500;"-->
+    }
+    .fontVariant{
+        font-size: 22px;
+        font-variant: small-caps; <!-- Coloca todas as letras em caixa alta mas respeita a letra maiuscula digitada -->
+    }        
+        </textarea>
+      </div>
+      <div>
+        <p class="separador">Estilo de link</p>
+        <a
+          href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Styling_links"
+          >Documentação AQUI</a
+        ><br /><br />
+        <a class="link" href="#"> CADASTRAR </a>
+        <br /><br /><br />
+        <a class="link2" href="#"> CADASTRAR 2 </a>
+        <br /><br /><br />
+        <a class="link3" href="#"> CADASTRAR 3 </a> <br /><br />
+        <textarea name="" id="" cols="120" rows="22">
+    .link{
+        text-decoration: none; <!-- tirar o sublinhado do link -->
+        color: red;
+        cursor: all-scroll; <!-- mudar o cursor -->
+        padding: 10px; <!-- mudar o padding de todos -->
+        padding-bottom: 5px; <!-- mudar apenas o de baixo, no caso ele substitui o 10px por 5px -->
+        border-radius: 10px;
+        border: 3px solid red;
+    }
+    .link:visited{
+        color: black; <!-- para colorir o link após ser visitado -->
+    }
+    .link:hover{
+        background-color: yellow; <!-- quando ponho o mouse em cima ele muda a cor -->
+        color: black;
+    }
+    .link:active{
+        background-color: yellow; <!-- quando clica o link modifica de acordo com o determinado -->
+        color: black;
+    }        
+        </textarea>
+      </div>
+      <div>
+        <p class="separador">Estilo de listas</p>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/list-style"
+          >Documentação AQUI</a
+        >
+        <br /><br />
+        <ul class="listUl">
+          <li>item 1</li>
+          <li>item 2</li>
+          <li>item 3</li>
+        </ul>
+
+        <ol class="listOl">
+          <li>item 1</li>
+          <li>item 2</li>
+          <li>item 3</li>
+        </ol>
+        <ul class="listUrl">
+          <li class="liPadrao">item 1</li>
+          <li class="liDentro">item 2</li>
+          <li>item 3</li>
+        </ul>
+        <textarea name="" id="" cols="110" rows="17">
+    .listUl{
+        list-style-type: none; <!-- retirar a parte identificador defaul do elemento -->
+    }
+    .listUrl{
+        list-style-image: url(../13\ -\ Estilo\ listas/imagens/s.jpg); <!-- inserir imagem -->
+        background-color: rgb(227, 205, 247);
+    }
+    .liPadrao{
+        margin-bottom:  3px;
+        background-color: aqua;
+        border: 1px solid; <!-- para por as bordas das linhas -->
+    }
+    .liDentro{
+        border: 1px solid; <!-- para por as bordas das linhas -->
+        list-style-position: inside; <!-- Joga o simbolo para drentro da linha -->
+    }
+        </textarea>
+      </div>
+      <div>
+        <p class="separador">Display</p>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/display"
+          >Documentação AQUI</a
+        ><br />
+        <p>Temos 4 display mais comuns</p>
+        <p>
+          none --- ele retira o elemento da tela, é como se nunca tivesse sido
+          colocado lá
+        </p>
+        <p>
+          inline --- fica na mesma linha, ele nao vai fazer a quebra de linha, e
+          nao conseguimos colocar tamanho no elemento
+        </p>
+        <p>
+          block --- preenche toda a largura da tela, ele vai fazer uma quebra de
+          linha e jogar o proximo conteudo para proxima linha. com o display
+          block podemos colocar tamanho (widht, height, etc.) no elemento
+        </p>
+        <p>
+          inline-block --- Ele vai manter o comportamento do display inline e
+          vai deixar colocar largura e altura
+        </p>
+        <p class="obs">
+          OBS: Nunca podemos ter um elemento do tipo block dentro de um
+          paragrafo, ele quebra o fluxo!!!
+        </p>
+        Exemplo de div dentro de div, respeitando sem quebrar fluxo do CSS:
+        <div class="divPai">
+          <div class="divNormal">DIV normal</div>
+          <div class="divFora">
+            DIV DE FORA
+            <div class="divDentro">DIV DE DENTRO</div>
+            AQUI CONTUNUA A DE FORA
+          </div>
+        </div>
+        <br />
+        Exemplo de um elemento que default é inline:
+        <p class="paragrafoSpan">
+          Aqui é o inicio de um paragrafo
+          <span> aqui é um span no meio de um paragrafo</span> aqui é a
+          sequencia do inicio. Vimos que o CSS nao perde o fluxo
+        </p>
+        Exemplo de div dentro de paragrafo colocando inline ou inline-block:
+        <br />
+        <p class="paragrafoDiv">
+          Aqui eu tenho um paragrafo no inicio
+          <span class="divParagrafo">com uma "DIV" no meio</span>e aqui tenho o
+          fim do paragrafo. Não podemos ter um tipo block dentro de um paragrafo
+          porque o block quebra o fluxo, mesmo transformando em inline. Neste
+          exemplo o "background-color: aqua;" deveria ter completado ate aqui.
+        </p>
+        <br /><br />
+        Exemplo de "display: none" e a função "visibility: hidden":
+        <p>
+          Aqui tenho o inicio de um paragrafo [
+          <img
+            class="displayNone"
+            src="./imagens/sorvete.jpg"
+            alt="sorvete"
+            width="55px"
+          />
+          ] imagem dentro do conchetes com display none.
+        </p>
+        <p>
+          Aqui tenho o inicio de um paragrafo [
+          <img
+            class="visibilityHidden"
+            src="./imagens/sorvete.jpg"
+            alt="sorvete"
+            width="55px"
+          />
+          ] imagem dentro do conchetes com "visibility: hidden".
+        </p>
+        <textarea name="" id="" cols="90" rows="10">
+          aqui
+        </textarea>
+      </div>
+      <p class="separador">Overflow</p>
+      <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/overflow"
+        >Documentação AQUI</a
+      >
+    </div>
+  </body>
+</html>

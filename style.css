@@ -1,0 +1,264 @@
+.separador{
+    text-align: left;
+    font-size: 22px;
+    padding: 5px;
+    padding-left: 30px;
+    color: white;
+    background-color: blue;
+}
+h2{
+    background-color:bisque;
+    max-width:max-content;
+padding: 5px;
+}
+.container2{
+    padding: 10px;
+    width: 100px;
+    height: 100px;
+    background-color: rgb(208, 255, 0);
+    border: 10px solid blue;
+}
+.container3{
+    padding: 10px;
+    width: 100px;
+    height: 100px;
+    background-color: rgb(208, 255, 0);
+    border: 10px solid blue;
+
+    box-sizing: border-box; /* Vai manter os 150px e vai jogar toda diferença de padding, margin e border para dentro do elemento */
+}
+.center{
+    color: red;
+    text-align: center; /* Para centralizar, podemos justificar por a direita, esquerda, etc */
+    text-decoration: underline; /* linha em baixo */
+    letter-spacing: 1.8px; /* espaço entre as letras */
+}
+.justify{
+    text-align: justify;
+    text-decoration: line-through; /* riscado */
+    line-height: 30px; /* altura da linha fixada em pixels*/
+}
+.uppercase{
+    text-transform: uppercase;
+    text-decoration: overline; /* linha em cima */
+    line-height: 1.8; /* altura da linha multiplicando pelo tamanho da fonte */
+}
+.lowercase{
+    text-transform: lowercase; /* todo em caixa alta */
+    text-decoration: underline overline; /* da para aplicar mais de um text-decoration */
+    word-spacing: 15px; /* espaço entre as palavras */
+}
+.capitalize{
+    text-transform: capitalize; /* para por toda primeira letra de cada palavra em maiuscula*/
+    text-shadow: 2px 2px 5px black; /* deslocamento para direita, deslocamento para baixo, desfoque e cor */
+}
+.indent{
+    text-indent: 30px; /* identa o inicio de cada paragrafo */
+}
+.link{
+    text-decoration: none;
+}
+.fontSerif{ /* cantos das fontes com pontas */
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic; /* Deixar a fonte em italico */
+}
+.fontSansSerif{ /* fonte lizas, arredondadas */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 22px; /* mudar tamanho da fonte e podemos usar todas unidades de medidas nela */
+}
+.fontMonoSpace{ /* fonte onde todos os caracteres ocupam o mesmo espaço */
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold; /* colocar em negrito, podemos colocar em valor par aestar modificando o negrito, ex: "font-weight: 500;"  */
+}
+.fontVariant{
+    font-size: 22px;
+    font-variant: small-caps; /* Coloca todas as letras em caixa alta mas respeita a letra maiuscula digitada */
+}
+#cm{
+    background-color: aqua;
+    width: 1cm;
+    height: 1cm;
+    display: inline-block;
+}
+#mm{
+    background-color: rgb(0, 255, 0);
+    width: 5mm;
+    height: 5mm;
+    display: inline-block;
+}
+#in{
+    background-color: rgb(55, 0, 255);
+    width: 1in;
+    height: 1in;
+    display: inline-block;
+}
+#px{
+    background-color: aqua;
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+}
+#pt{
+    background-color: aqua;
+    width: 10pt;
+    height: 10pt;
+    display: inline-block;
+}
+#pc{
+    background-color: aqua;
+    width: 1pc;
+    height: 1pc;
+    display: inline-block;
+}
+.container{
+    font-size: 25px;
+
+    width: 300px;
+    background: rgb(243, 133, 133);
+}
+.inside{ 
+    font-size: 0.5em;
+
+    width: 200px;
+    background: rgb(32, 77, 224);
+}
+.inside_em{ /* em = tamanho do elemento fonte (elemento pai), 2 "em" duplica, 3 "em" triplica ... */
+    font-size: 2em; /* O valor de "em" é multiplicado pelo valor do font-size do "pai" do elemento */
+
+    width: 4em; /* unidade "em" é sempre relacionada ao tamanho da font-size do "pai" */
+    background:blue; /* tamanho do background: 25px (font-size pai) * 2em (font-size filho) * 6em (width filho) = 200px*/
+}
+.inside_rem{ /* rem = tamanho do elemento raiz (do HTML inteiro), 2 "em" duplica, 3 "em" triplica ... */
+    font-size: 1rem; /* O valor de "rem" é multiplicado pelo valor do font-size da "raiz" do elemento */
+}
+.container_vw{ /* unidade de medida em relção a modificação da largura da janela do html */
+    font-size: 30px;
+
+    width: 50vw;
+    background: rgb(243, 133, 133);
+}
+.container_vh{ /* unidade de medida em relção a modificação da altura da janela do html, porem o efeito é na largura */
+    font-size: 20px;
+
+    width: 50vh;
+    background: rgb(243, 133, 133);
+}
+.container_vmin{/* unidade de medida em relção ao menor tamanho da janela do html sendo altura ou largura */
+    font-size: 20px;
+
+    width: 50vmin;
+    background: rgb(243, 133, 133);
+}
+.container_vmax{/* unidade de medida em relção ao maior tamanho da janela do html sendo altura ou largura */
+    font-size: 20px;
+
+    width: 40vmax;
+    background: rgb(243, 133, 133);
+}
+.container_porcento{/* unidade de medida em relção ao elemento "pai" baseando-se na % (neste exemplo o elemento pai é o body) */
+    font-size: 20px;
+
+    width: 80%;
+    height: 50%;
+    background: rgb(243, 133, 133);
+}
+b{
+    color: rgb(236, 34, 34);
+}
+.paragrafoInline p{
+        display: inline;
+}
+.link{
+    text-decoration: none; /* tirar o sublinhado do link*/
+    color: red;
+    cursor: all-scroll; /* mudar o cursor */
+    padding: 10px; /* mudar o padding de todos */
+    padding-bottom: 5px; /* mudar apenas o de baixo, no caso ele substitui o 10px por 5px */
+    border-radius: 10px;
+    border: 3px solid red;
+}
+.link:visited{
+    color: black; /* para colorir o link apos ser visitado */
+}
+.link2{
+    text-decoration: none; /* tirar o sublinhado do link*/
+    color: red;
+    cursor: all-scroll; /* mudar o cursor */
+    padding: 10px; /* mudar o padding de todos */
+    padding-bottom: 5px; /* mudar apenas o de baixo, no caso ele substitui o 10px por 5px */
+    border-radius: 10px;
+    border: 3px solid red;
+}
+.link2:hover{
+    background-color: yellow; /* quando ponho o mouse em cima ele muda a cor */
+    color: black;
+}
+.link3{
+    text-decoration: none; /* tirar o sublinhado do link*/
+    color: red;
+    cursor: all-scroll; /* mudar o cursor */
+    padding: 10px; /* mudar o padding de todos */
+    padding-bottom: 5px; /* mudar apenas o de baixo, no caso ele substitui o 10px por 5px */
+    border-radius: 10px;
+    border: 3px solid red;
+}
+.link3:active{
+    background-color: yellow; /* quando clica o link modifica de acordo com o determinado */
+    color: black;
+}
+.listUl{
+    list-style-type: none; /* retirar a parte identificador defaul do elemento */
+}
+.listUrl{
+    list-style-image: url(./imagens/s.jpg); /* inserir imagem */
+    background-color: rgb(227, 205, 247);
+}
+.liPadrao{
+    margin-bottom:  3px;
+    background-color: aqua;
+    border: 1px solid; /* para por as bordas das linhas */
+}
+.liDentro{
+    border: 1px solid; /* para por as bordas das linhas */
+    list-style-position: inside; /* Joga o simbolo para drentro da linha */
+}
+.obs{
+    font-size: 20px;
+    color: red;
+}
+.divPai{
+    padding: 15px;
+    background-color: bisque;
+}
+.divNormal{
+    background-color: aqua;
+}
+.divFora{
+    width: 500px;
+    background-color: yellow;
+}
+.divDentro{
+    width: 300px;
+    height: 50px;
+    background-color: red;
+}
+.paragrafoDiv{
+    display: inline;
+    background-color: aqua;
+}
+.divParagrafo{
+    display: inline-block;
+    background-color: rgb(73, 73, 243);
+}
+span{
+    background-color: cadetblue;
+}
+.paragrafoSpan{
+    background-color: rgb(248, 123, 123);
+}
+.displayNone{
+    display: none;
+}
+.visibilityHidden{
+    visibility: hidden;
+}
