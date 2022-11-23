@@ -262,3 +262,428 @@ span{
 .visibilityHidden{
     visibility: hidden;
 }
+.container010{
+    color: rgb(255, 153, 0);
+    width: 285px;
+    height: 100px;
+    background-color: blue;
+}
+.container020{
+    color: rgb(255, 153, 0);
+    width: 285px;
+    height: 100px;
+    background-color: blue;
+
+    overflow: hidden;
+}
+.container030{
+    color: rgb(255, 153, 0);
+    width: 285px;
+    height: 100px;
+    background-color: blue;
+
+    overflow: auto;
+}
+.container040{
+    color: rgb(255, 153, 0);
+    width: 285px;
+    height: 100px;
+    background-color: blue;
+
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.quadrado{
+    height: 50px;
+    width: 50px;
+    background-color: red;
+
+    margin: auto; /* para centralizar */
+}
+.quadrado1{
+    height: 50px;
+    width: 50px;
+    background-color: red;
+
+    margin-left: auto; /* para prender na direita */
+}
+.quadrado2{
+    height: 50px;
+    width: 50px;
+    background-color: red;
+
+    margin-right: auto; /* para prender na esquerda*/
+}
+.imagem{
+    width: 150px;
+
+    display: block; /*transformar a imagem em "display:block" e depois usar o "margin: auto", "margin-left: auto" ou "margin-right: auto" */
+    margin: auto;
+}
+.imagem1{
+    width: 150px;
+
+    text-align: center;
+}
+.quadrado00{
+    height: 100px;
+    width: 100px;
+    display: inline-block; /* para permitir que tenha outro elemento ao seu lado */
+}
+.quadrado100{
+    height: 100px;
+    width: 100px;
+}
+.quadrado300{
+    height: 30px;
+    width: 30px;
+    margin: 3px;
+}
+.retangulo{
+    height: 200px;
+    width: 75px;
+
+    overflow: auto;
+}
+.red{
+    background-color: red;
+}
+.green{
+    background-color: green;
+}
+.yellow{
+    background-color: yellow;
+}
+.blue{
+    background-color: aqua;
+}
+.pink{
+    background-color: pink
+}
+.pStatic{
+    position: static;
+}
+.pRelative{
+    position: relative; /* vamos poder usar top, botton, left, right para poder modificar a posição a partir no local original do elemento */
+    left: 50px;
+}
+.pFixed{
+    position: fixed;
+    top: 350px; /* vai ficar a 330px do topo da pagina */
+    right: 20px; /* vai ficar a 20px do lado direito da pagina */
+}
+.pAbsolute{
+    position: absolute; /*vai posicionar em referencia ao pai do elemento desde que nao seja POSITION: STATIC e se nao tiver pai vai ser ao body */
+    left: 70px;
+    top: 20px;
+}
+.pStiky{
+    position: sticky;
+    top: 2px;
+    background-color: brown;
+}
+.displayInline{
+    display: inline;
+}
+.floatLeft{
+    float: left;
+}
+.floatRight{
+    float: right;
+}
+.clearLeft{
+    clear: left;
+}
+.container011{
+    border: 1px solid black;
+    overflow: auto;
+    margin-bottom: 5px;
+}
+.container022{
+    border: 1px solid black;
+}
+.font{
+    font-size: 20px;
+    color: brown;
+    margin-bottom: 25px;
+}
+.card{
+    float: left; /* para colocar um card ao lado do outro */
+    width: 300px;
+    height: 160px;
+    border: 2px solid black;
+    text-align: center; /* para centralizar horizontalmente tudo o que tem dentro dos cards */
+
+    position: relative;
+}
+.c1{
+    background-color: aqua;
+    line-height: 160px; /* aqui estou dizendo que o .c1 vai ter a mesma altura do pai (.card) e vai por a linha no centro*/
+}
+.c2{
+
+    position: absolute; /* para funcionar precisamos que o pai nao seja "position: statick" */
+    width: 200px; /* para dar tamanho ao elemento */
+    top: 50%; /* adicionar 50% do valor do pai entre o elemento e o topo */
+    left: 50%; /* adicionar 50% do valor do pai entre o elemento a esquerda*/
+    transform: translate(-50%, -50%); /* ajustar o eixo central do elemento dentro do pai, no caso posicionando a 50% do y e 50% do x (centralizando em relaçºao ao pai) */
+
+    background-color: palegoldenrod;
+}
+.headerx{
+    height: 130px;
+    width: 80%;
+    margin: auto;
+    background-color: antiquewhite;
+
+    position: relative;
+
+}
+.header2x{
+    position: absolute;
+    background-color: aquamarine;
+
+    width: 75%; /* tamanho em relação ao elemento pai */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.fontVw{
+    font-size: 4vw;
+    text-align: center;
+}
+.ss{
+    float: none;
+}
+.menu123{
+    padding: 0px; /* para retirar o padding default do "ul" */
+    margin: 0px; /* para retirar a margin default do "ul" */
+    float: right; /* para jogar o conteudo da "class menu" para a direita ou seja o "ul"*/
+}
+.container123{
+    overflow: hidden;
+    margin: auto; /* Para centralizar o conteudo da "class container" */
+    width: 80%; /* para ficar responsivo em 80% da janela */
+    background-color: gray;
+    padding: 15px;
+    font-size: 18px;
+}
+ul.menu123{
+    list-style: none;
+}
+.menu123 li{
+    display: inline-block; /* para os itens do "li" poderem ficar na mesma linha de outro elemento */
+    color: white;
+    margin-right: 15px; /* para dar uma distancia de um iten do "li" do outro */
+}
+.logo123{
+    float: left; /* para jogar o conteudo da "class logo" para a esquerda */
+    color: white;
+}
+
+
+@media screen and (max-width: 830px) {
+    .logo123{
+        float: none;
+        text-align: center;
+
+        padding: 10px;
+        border: 2px solid rgb(145, 50, 50);
+    }
+    .menu123{
+        float: none;
+        text-align: center;
+        margin-top: 10px;
+        border: 2px solid rgb(158, 58, 58);
+    }
+    .menu123 li{
+        float: none;
+        display: block;
+        padding: 10px;
+        margin: 3px;
+        border: 2px solid rgb(51, 189, 63);
+    }
+
+}
+
+@media screen and (max-width: 630px) {
+    .logo123{
+        float: none;
+        text-align: center;
+        padding: 10px;
+        border: 2px solid rgb(114, 114, 114);
+    }
+    .menu123{
+        float: none;
+        text-align: center;
+        margin-top: 10px;
+        border: 2px solid rgb(252, 174, 174);
+    }
+    .menu123 li{
+        float: none;
+        display: block;
+        padding: 10px;
+        margin: 3px;
+        border: 2px solid rgb(114, 114, 114);
+    }
+
+}
+.pseudoP::first-line{ /* para mudar o style da primeira linha independente da responsividade */
+    color: red;
+}
+.pseudoP::first-letter{ /* para mudar o style da primeira letra */
+    color: rgb(0, 26, 255);
+    font-size: 30px;
+}
+.pseudoP::selection{ /* quando selecionar parte do texto ele modifica background e color */
+    background-color: yellowgreen;
+    color: orangered;
+}
+#antes li, #icon li{
+    list-style: none;
+}
+#antes li::before{
+    content: "A ";
+    color: blueviolet;
+    font-size: 20px;
+}
+#icon li::before{
+    content: ""; /* criei um espaço */
+    display: inline-block; /* deixei ele ter algo do lado */
+
+    width: 25px; /* criei o tamanho do espaço */
+    height: 25px;
+    background-image: url(./imagens/g_icon.png); /* inseri uma imagem de fundo */
+    background-repeat: no-repeat; /* a imagem nao pode repetir */
+    background-size: cover; /* a imagem tem que cobrir tudo */
+    transform: translateY(25%); /* ajustei a posição da imagem em relação ao eixo y */
+}
+#head01 p{ /* vai pegar todos os "p" dentro da ID */
+    color: red;
+}
+#head01 > p{ /* vai pegar os "p" onde o ID é o pai do elemento */
+    background-color: aqua;
+}
+#head01 + p{ /* vai pegar o primeiro "p" do proximo lemento que esta logo apos o elemento ID "head01", se o proximo elemento nao for um "p" ele nao pegaria */
+    background-color: bisque;
+}
+#head01 ~ p{ /* vao pegar todos os "p" apos o ID "head01"*/
+    color: brown;
+}
+[width]{ /* selesionar pelo atributo */
+    background-color: yellow;
+}
+[width="350px"]{ /* selesionar pelo atributo e seu valor*/
+    font-size: 28px;
+}
+[title~="identificador"]{ /* selesionar todos os title tenham a palavra "identificador"*/
+    color: blue;
+}
+[title^="i"]{ /* selesionar todos os title que comecem com a letra "i" */
+    background-color: blanchedalmond;
+    width: 350px;
+}
+[title*="i"]{ /* selesionar todos os title em qualquer lugar que comece com a letra "i" */
+    font-size: 28px;
+}
+[title$="0"]{ /* selesionar todos os title que terminem com o numero "0" */
+    color: orangered;
+}
+#listas{
+    margin: 0px;
+    padding: 0px;
+}
+#listas li{
+    list-style: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 22px;
+    color: black;
+    width: 350px;
+}
+#listas li:nth-of-type(odd){ /* para pegar os pares */
+    background-color: beige;
+}
+#listas li:nth-of-type(even){ /* para pegar os impares */
+    background-color: gray;
+    color: white;
+}
+#inp input:focus{ /* poe em foco onde esta selecionado */
+    color: red;
+}
+#list li:first-of-type{ /* o primeiro tipo "li" de cada lista vai ficar azul */
+    color: red;
+}
+#list li:first-child{ /* se for o primeiro filho ele muda a cor */
+    color: blue;
+}
+#list li:nth-child(3){ /* para escolher a posição */
+    color: rgb(0, 255, 13);
+}
+#list li:nth-of-type(4){ /* vai pegar a posição do tipo */
+    color: palevioletred;
+}
+.container321{
+    width: 100%;
+    background-color: aqua;
+}
+.primeira{
+    margin-right: -4px;
+    margin-bottom: -4px;
+    display: inline-block; /* par ater um objeto ao seu lado */
+    width: calc(100% - 300px); /* para calcular o width dos objetos lado a lado de forma responsiva */
+    height: 300px;
+    background-color: yellow;
+}
+.segunda{
+    margin-right: -4px;
+    margin-bottom: -4px;
+    display: inline-block; /* o line block desconpença as margens, mas podemos corrigir */
+    width: 300px;
+    height: 300px;
+    background-color: green;
+}
+.terceira{
+    width: calc(100% - 200px); /* uma forma de fixar espaçamentos laterais */
+    height: 100px;
+    margin: auto;
+    background-color: red;
+}
+.img01{
+    transform: rotate(45deg);
+}
+.img02{
+    transform: scale(0.5, 0.9); /* horizontal e vertical */
+}
+.img03{
+    transform: skew(40deg, 20deg); /* horizontal e vertical */
+}
+.divVermelha{
+    margin-left: 20px;
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    transform: rotate(45deg) scale(0.8) skew(-30deg);
+}
+:root{ /* root é o HTML */
+    --var_color: red; /* aqui criamos uma variavel com a cor vermelha */
+
+    --square-size: 100px; /* aqui criamos uma variavel com um size, podendo modificar sempre que quiser e tendo o efeito aplicado no elemento que utilizou a variavel */
+}
+.p2{
+    color: var(--var_color); /* aqui puxamos a variavel e aplicamos onde queremos */
+    font-size: 25px;
+}
+.p3{
+    color: var(--var_color); /* aqui puxamos a variavel e aplicamos onde queremos */
+    font-size: 15px;
+}
+.sqr01{
+    width: var(--square-size);
+    height: var(--square-size);
+    background-color: black;
+}
+.sqr02{
+    width: var(--square-size);
+    height: var(--square-size);
+    background-color: red;
+}

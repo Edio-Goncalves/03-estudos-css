@@ -52,6 +52,7 @@
       </textarea
         >
       </div>
+
       <div>
         <p class="separador">Class (.) e ID (#)</p>
         <a
@@ -71,6 +72,7 @@
           usar class.
         </p>
       </div>
+
       <div>
         <p class="separador">border, margin e padding</p>
         <h2>Border</h2>
@@ -124,6 +126,7 @@
     }
         </textarea>
       </div>
+
       <div>
         <p class="separador">box model</p>
         <a
@@ -162,6 +165,7 @@
     </style>
         </textarea>
       </div>
+
       <div>
         <p class="separador">Unidades de media</p>
         <div class="paragrafoInline">
@@ -313,6 +317,7 @@
           >
         </div>
       </div>
+
       <div>
         <p class="separador">text transform & text decoration</p>
         <a
@@ -404,6 +409,7 @@
     }        
         </textarea>
       </div>
+
       <div>
         <p class="separador">font</p>
         <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/font"
@@ -456,6 +462,7 @@
     }        
         </textarea>
       </div>
+
       <div>
         <p class="separador">Estilo de link</p>
         <a
@@ -490,6 +497,7 @@
     }        
         </textarea>
       </div>
+
       <div>
         <p class="separador">Estilo de listas</p>
         <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/list-style"
@@ -531,6 +539,7 @@
     }
         </textarea>
       </div>
+
       <div>
         <p class="separador">Display</p>
         <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/display"
@@ -609,10 +618,484 @@
           aqui
         </textarea>
       </div>
-      <p class="separador">Overflow</p>
-      <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/overflow"
-        >Documentação AQUI</a
-      >
+
+      <div>
+        <p class="separador">Overflow</p>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/overflow"
+          >Documentação AQUI</a
+        >
+
+        Exemplo sem overflow:
+        <div class="container010">
+          lorem ipsum lorem ipsum lorem ipsum lorem
+          ipsumloremipsumloremipsumloremipsumloremipsum lorem ipsum lorem ipsum
+          lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem
+          ipsumloremipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem
+          ipsum lorem ipsum lorem ipsum
+        </div>
+
+        <br /><br /><br /><br />
+
+        Exemplo "overflow: hidden":
+        <div class="container020">
+          lorem ipsum lorem ipsum lorem ipsum lorem
+          ipsumloremipsumloremipsumloremipsumloremipsum lorem ipsum lorem ipsum
+          lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem
+          ipsumloremipsumlorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem
+          ipsum lorem ipsum lorem ipsum
+        </div>
+        Ele esconde o excesso e perdemos a informação que esta escondida.
+
+        <br /><br /><br /><br />
+
+        Exemplo "overflow: auto":
+        <div class="container030">
+          lorem ipsum lorem ipsum lorem lorem ipsum lorem ipsum lorem lorem
+          ipsum lorem ipsum lorem lorem ipsum lorem ipsum lorem lorem ipsum
+          lorem ipsum lorem lorem ipsum lorem ipsum lorem lorem ipsum lorem
+          ipsum lorem lorem ipsum lorem ipsum lorem
+        </div>
+        Ele poe um scroll de acordo com a nescessidade, se precisar de scroll
+        para os lados ele tambem vai por.
+
+        <br /><br /><br /><br />
+
+        Exemplo "overflow: auto":
+        <div class="container030">
+          <img src="./imagens/sorvete.jpg" alt="sorvete" width="450px" />
+        </div>
+        Colocou o scroll de acordo com a nescessidade.
+
+        <br /><br /><br /><br />
+
+        Exemplo "overflow-y: ascroll" + "overflow-x: hidden":
+        <div class="container040">
+          <img src="./imagens/sorvete.jpg" alt="sorvete" width="450px" />
+        </div>
+        colocamos o scroll apenas no "y" e escondemos o scroll do "x".
+      </div>
+
+      <div>
+        <p class="separador">Alinhamento Horizontal</p>
+        <a href="xx">Documentação AQUI</a><br /><br />
+        Para centralizar: "margin: auto"
+        <div class="quadrado"></div>
+        <br />
+
+        Para prender na direita: "margin-left: auto"
+        <div class="quadrado1"></div>
+        <br />
+
+        Para prender na esquerda: "margin-right: auto"
+        <div class="quadrado2"></div>
+        <br />
+
+        Para prender imagens vamos transformar a imagem em "display:block" e
+        depois usar o "margin: auto", "margin-left: auto" ou "margin-right:
+        auto"<br />
+        <img class="imagem" src="./imagens/sorvete.jpg" alt="sorvete" />
+        <br />
+
+        Outra forma de prender imagens é colocar dentro de uma div e usar
+        "text-align: left", "text-align: center", "text-align: right":<br />
+        <div class="imagem1">
+          <img src="./imagens/sorvete.jpg" alt="sorvete" width="150px" />
+        </div>
+      </div>
+
+      <div>
+        <p class="separador">Position</p>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/position"
+          >Documentação AQUI</a
+        ><br /><br />
+        <p><b> Position static e relative:</b></p>
+        <p>
+          No "position: static" nao podemos modificar sua posição com o top,
+          botton, left e right, já com o "position: relative" conseguimos
+          modificar sua posição a partir da posição inicial do elemento. No
+          exemplo abaixo temos 2 div onde deveria ficar uma ao lado da outra,
+          mas a div em verde criou uma distancia de 50px a esquerda de onde
+          deveria estar inicialmente.
+        </p>
+        <br />
+        <div class="quadrado00 red pStatic">
+          "Position: Static", div tem como default position static
+        </div>
+
+        <div class="quadrado00 green pRelative">
+          Position relative 50px left da posição original
+        </div>
+        <br /><br />
+        ****
+        <p><b> Position fixed:</b></p>
+        <p>
+          No "position: fixed" podemos usar tambem o top, botton, left e right,
+          mas é em relação a janela da pagina. No exemplo abaixo vamos ter uma
+          div a 330px do topo da pagina e 20px do lado direito da pagina. Otima
+          opção para fixar chat pop up com botton + right
+        </p>
+        <br />
+        <div class="quadrado00 yellow pFixed">Top 350px e right 20px</div>
+        <br /><br /><br /><br />
+        ****
+        <p>
+          <b> Position absolute:</b
+          ><b style="color: red; font-size: 18px"
+            >"position: absolute" so funciona se o elemento pai nao estiver em
+            "position: fixed"</b
+          >
+        </p>
+        <p>
+          No "position: absolute" podemos usar tambem o top, botton, left e
+          right, mas é em relação ao pai do elemento e se nao tiver pai vai ser
+          ao body da pagina. No exemplo abaixo temos uma div com "position:
+          relative" left: 50px em relação a posição original e dentro desta div
+          temos outra div com "position: absolute" left: 70px e top: 20px em
+          relação ao elemento pai, que no caso é a div em azul.
+        </p>
+        <br />
+        <div class="quadrado00 blue pRelative">
+          position: relatite; <br />
+          left: 50px
+          <div class="quadrado100 pink pAbsolute">
+            Position: absolute; <br />
+            top: 20px e left: 70px
+          </div>
+        </div>
+        <br /><br /><br /><br />
+        ****
+        <p><b> Position stiky:</b></p>
+        <p>
+          No "position: stiky" podemos usar tambem o top, botton, left e right,
+          mas é em relação ao pai do elemento. vamos usar ele para fixar nas
+          limitações do elemento onde escolhermos, como no exemplo abaixo .
+        </p>
+        <br />
+        <div class="retangulo blue">
+          <div class="quadrado300 green"></div>
+          <div class="quadrado300 green"></div>
+          <div class="quadrado300 green pStiky"></div>
+          <div class="quadrado300 green"></div>
+          <div class="quadrado300 green"></div>
+          <div class="quadrado300 green"></div>
+          <div class="quadrado300 green"></div>
+          <div class="quadrado300 green"></div>
+          <div class="quadrado300 green"></div>
+          <div class="quadrado300 green"></div>
+          <div class="quadrado300 green"></div>
+          <div class="quadrado300 green"></div>
+        </div>
+      </div>
+
+      <div>
+        <p class="separador">Float</p>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/float"
+          >Documentação AQUI</a
+        ><br /><br />
+        <p class="font">
+          <strong
+            >FLOAT: é uma propriedade do display que permite que um lemento
+            fique flutuando ao lado de outro elemento</strong
+          >
+        </p>
+        <div class="container011">
+          <img
+            class="floatLeft"
+            src="./imagens/sorvete.jpg"
+            alt="sorvete"
+            width="200px"
+          />
+          <p class="displayInline">
+            Aqui temos um paragrafo que mudamos para "display: inline" para
+            ficar ao lado da imgem. E colocamos um "float: left" na IMAGEM para
+            ela ficar flutuando a esquerda do proximo elemento, temos o "float:
+            right" tambem. <br /><br />
+            Loreipsum Loreipsum Loreipsum Loreipsum Loreipsum Loreipsum
+            Loreipsum Loreipsum Loreipsum.
+          </p>
+          <br />
+          <br />
+          <p style="color: red; font-size: 20px">
+            Vamos sempre colocar dentro de DIV e usar um "overflow: auto" para a
+            imagem nao ultrapassar o tamanho da div e causar um bug com o
+            proximo elemento. COMO EXEMPLO ABAIXO
+          </p>
+        </div>
+
+        <div class="container011">
+          <img
+            class="floatRight"
+            src="./imagens/sorvete.jpg"
+            alt="sorvete"
+            width="200px"
+          />
+          <p>
+            Aqui temos um paragrafo que mudamos para "display: inline" para
+            ficar ao lado da imgem. E colocamos um "float: right" na IMAGEM para
+            ela ficar flutuando a esquerda do proximo elemento.
+          </p>
+          <img
+            class="floatLeft"
+            src="./imagens/sorvete.jpg"
+            alt="sorvete"
+            width="200px"
+          />
+          <p>
+            Aqui temos um paragrafo que mudamos para "display: inline" para
+            ficar ao lado da imgem. E colocamos um "float: left" na IMAGEM para
+            ela ficar flutuando a esquerda do proximo elemento.
+          </p>
+        </div>
+
+        <div class="container022">
+          <img
+            class="floatLeft"
+            src="./imagens/sorvete.jpg"
+            alt="sorvete"
+            width="130px"
+          />
+          <p class="clearLeft">
+            Podemos usar tambem o "clear: left" no PARAGRAFO para eliminar o
+            eleito do "float: left". Temos tambem o "clear: right" e o "clear:
+            both".
+          </p>
+        </div>
+      </div>
+
+      <div>
+        <p class="separador">Alinhamento Vertical</p>
+        <a href="xx">Documentação AQUI</a><br /><br />
+        <div class="card">
+          <div class="c1">Centralizar verticalmente com "line-height"</div>
+        </div>
+
+        <div class="card">
+          <div class="c2">
+            Centralizar verticalmente com "position" e "transform:
+            translate(-50%, -50%)"
+          </div>
+        </div>
+        <br /><br /><br /><br /><br /><br /><br /><br /><br />
+      </div>
+
+      <div>
+        <p class="separador ss">Responsividade</p>
+        <a
+          href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design"
+          >Documentação AQUI</a
+        ><br /><br />
+        <div class="headerx">
+          <p>
+            Uma forma para trabalhar com a responsividade em uma DIV é
+            utilizando % em width e height
+          </p>
+        </div>
+        <br />
+        <div class="headerx">
+          <div class="header2x">
+            <p>
+              Para trabalhar com responsividade de DIV dentro de uma DIV vamos
+              usar o alinhamento vertical de position + transform.
+            </p>
+          </div>
+        </div>
+        <br />
+        <div class="headerx">
+          <p class="fontVw">
+            Tambem conseguimos trabalhar a responsividade de texto com
+            "font-size: 6vw"
+          </p>
+        </div>
+      </div>
+
+      <div>
+        <p class="separador ss">Media Queries</p>
+        <a
+          href="https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries"
+          >Documentação AQUI</a
+        ><br />
+        <p>
+          Vamos usar o media querie para poder trabalhar a responsividade da
+          pagina pelo CSS.
+        </p>
+        <p>
+          Comando media querie no css: <br />
+          "@media screen and (max-width: 500px) { }" <br /><br />
+          ele pode ser tambem "min": <br />
+          "@media screen and (min-width: 500px) { }" <br /><br />
+          Podemos usar mais de um em um media querie arquivo css para esta
+          estilizando a partir de determinado tamanho.
+        </p>
+        <p style="color: red; font-size: 20px">
+          Atenção! sempre usar do maior pixel para o menor quando for fazer em
+          "max" e do menor para o maior quando for fazer em "min"
+        </p>
+
+        <div class="container123">
+          <div class="logo123">LOGO</div>
+
+          <ul class="menu123">
+            <li>Home</li>
+            <li>Cursos</li>
+            <li>Contato</li>
+            <li>Localização</li>
+            <li>Quem somos?</li>
+          </ul>
+        </div>
+      </div>
+
+      <div>
+        <p class="separador ss">Pseudo elementos</p>
+        <a
+          href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements"
+          >Documentação AQUI</a
+        ><br />
+        <h1>Titulo</h1>
+        <p class="pseudoP">
+          Texto qualquer Texto qualquer Texto qualquer Texto qualquerTexto
+          qualquer Texto qualquer Texto qualquer Texto qualquer Texto qualquer
+          Texto qualquer Texto qualquer Texto qualquerTexto qualquerTexto
+          qualquer Texto qualquerTexto qualquervTexto qualquer Texto qualquer
+          Texto qualquerTexto qualquerTexto qualquer Texto qualquerTexto
+          qualquervTexto qualquer Texto qualquer
+        </p>
+
+        <ul id="antes">
+          <li>item 1</li>
+          <li>item 2</li>
+          <li>item 3</li>
+        </ul>
+
+        <ul id="icon">
+          <li>item 10</li>
+          <li>item 20</li>
+          <li>item 30</li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="separador ss">Seletores</p>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors"
+          >Documentação AQUI</a
+        ><br />
+        <header id="head01">
+          <p>Pargrafo 1</p>
+          <p>Pargrafo 2</p>
+          <p class="p3">Pargrafo 3</p>
+          <section>
+            <p>Pargrafo 4</p>
+            <p>Pargrafo 5</p>
+            <p>Pargrafo 6</p>
+          </section>
+        </header>
+
+        <p>Paragrafo apos o ID "head01"</p>
+        <p>Paragrafo apos o ID "head01"</p>
+        <p>Paragrafo apos o ID "head01"</p>
+
+        <div>
+          <p>Pargrafo 1</p>
+          <p>Pargrafo 2</p>
+          <p>Pargrafo 3</p>
+          <p>Pargrafo 4</p>
+        </div>
+
+        <p>Paragrafo apos o ID "head01"</p>
+        <p>Paragrafo apos o ID "head01"</p>
+      </div>
+
+      <div>
+        <p class="separador ss">Pseudo Classes</p>
+        <a
+          href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes"
+          >Documentação AQUI</a
+        >
+        <input id="inp" type="text" />
+        <input id="inp" type="text" />
+
+        <ul id="list">
+          <li>Item 01</li>
+          <li>Item 02</li>
+          <li>Item 03</li>
+          <li>Item 04</li>
+          <li>Item 05</li>
+          <li>Item 06</li>
+        </ul>
+        <ul id="list">
+          <h5 style="margin-bottom: 0px">Lista</h5>
+          <li>Item 07</li>
+          <li>Item 08</li>
+          <li>Item 09</li>
+          <li>Item 10</li>
+          <li>Item 11</li>
+        </ul>
+
+        <ul id="listas">
+          <li>Item 0</li>
+          <li>Item 1</li>
+          <li>Item 2</li>
+          <li>Item 3</li>
+          <li>Item 4</li>
+          <li>Item 5</li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="separador ss">Função calc</p>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/calc"
+          >Documentação AQUI</a
+        >
+        <div class="container321">
+          <div class="primeira"></div>
+          <div class="segunda"></div>
+          <div class="terceira"></div>
+        </div>
+      </div>
+
+      <div>
+        <p class="separador ss">Transformações</p>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform"
+          >Documentação AQUI</a
+        >
+        <p>Original</p>
+        <img src="./imagens/thumb_up.png" alt="" width="100px" />
+
+        <p>Rotação em graus</p>
+        <img class="img01" src="./imagens/thumb_up.png" alt="" width="100px" />
+
+        <p>Escala na vertical e horizontal</p>
+        <img class="img02" src="./imagens/thumb_up.png" alt="" width="100px" />
+
+        <p>direção das pontas</p>
+        <img class="img03" src="./imagens/thumb_up.png" alt="" width="100px" />
+
+        <p>Pode ser em todos elementos e pode ter mais de um transform</p>
+        <div class="divVermelha"></div>
+      </div>
+
+      <div>
+        <p class="separador ss">Variavel no CSS</p>
+        <a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS/var"
+          >Documentação AQUI</a
+        ><br />
+        <h2 class="h02">Titulo h2</h2>
+
+        <p class="p1">Paragrafo 01</p>
+        <p class="p2">Paragrafo 02</p>
+        <p class="p3">Paragrafo 03</p>
+        <p class="p4">Paragrafo 04</p>
+        <p class="p5">Paragrafo 05</p>
+
+        <div class="sqr01"></div>
+        <div class="sqr02"></div>
+      </div>
+
+      <div>
+        <p class="separador ss">Flex Box</p>
+        <a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS/var"
+          >Documentação AQUI</a
+        ><br />
+      </div>
     </div>
   </body>
 </html>
