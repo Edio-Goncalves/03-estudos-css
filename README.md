@@ -12,6 +12,11 @@
 - [ESTILO DE LINK](#estilo-de-link)
 - [ESTILO DE LISTAS](#estilo-de-listas)
 - [DISPLAY](#display)
+- [OVERFLOW](#overflow)
+- [FLOAT](#float)
+- [POSITION](#position-posicionamento-verticalx-e-horizontaly)
+- [RESPONSIVIDADE E MEDIA QUERIE](#responsividade-e-media-querie)
+- [PSEUDO ELEMENTOS](#pseudo-elementos)
 
 ### LINKS DE VÍDEO CURSO E DOCUMENTAÇÃO
 
@@ -159,7 +164,7 @@ Cada adição de BORDER, PADDING e MARGIN, modifica o tamanho do elemento para f
             height: 100px;
             border: 10px solid blue;
 
-            box-sizing: border-box; <!-- Vai manter os 100px e jogar toda diferença para dentro do elemento -->
+            box-sizing: border-box; <!-- Vai manter os 100px e jogar toda diferença p/ dentro do elemento -->
         }
     </style>
 
@@ -181,7 +186,7 @@ Cada adição de BORDER, PADDING e MARGIN, modifica o tamanho do elemento para f
 #### Unidades de medidas fixas
 
 `width: 1cm;` centimetros  
- `width: 5mm;` milimetros (10 milimetros = 1cm)  
+`width: 5mm;` milimetros (10 milimetros = 1cm)  
 `width: 1in;` polegadas (1 polegada = 2,54cm)  
 `width: 10px;` pixel  
 `width: 10pt;` ponto  
@@ -204,8 +209,10 @@ Cada adição de BORDER, PADDING e MARGIN, modifica o tamanho do elemento para f
 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-transform">Documentação text-transform AQUI</a><br /><br />
 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration">Documentação text-decoration AQUI</a>
 
+_OBS: sempre que formos usar a forma resumida dos tamanho vamos pensar em sentido horário, topo, direita, inferior e esquerda_
+
 `text-align: center;` // Para centralizar na horizontal, podemos justificar para direita, esquerda, etc.  
-`line-height: 100px;` // Para centratilar na vertical, vamos setar o tamanho de acordo com o tamanho do "pai"
+`line-height: 100px;` // Para criar uma linha com altura determinada e centralizar o texto na vertical
 `text-indent: 30px;` // identa o início de cada paragrafo  
 `letter-spacing: 1.8px;` // espaço entre as letras  
 `word-spacing: 15px;` // espaço entre as palavras  
@@ -262,7 +269,7 @@ Cada adição de BORDER, PADDING e MARGIN, modifica o tamanho do elemento para f
         color: black;
     }
     .link:active{
-        background-color: yellow; <!-- ":active" quando clica o link modifica de acordo com o determinado -->
+        background-color: yellow; <!-- ":active" quando clica o link modifica de acordo com o pedido -->
         color: black;
     }
 </style>
@@ -379,12 +386,108 @@ Explicação completa de `display:inline-block;` :
 
 #
 
-### POSITION
+### POSITION (Posicionamento vertical(x) e horizontal(y))
 
 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/position">Documentação AQUI</a>
 
 #### Position static e relative
 
 <a href="https://www.youtube.com/watch?v=pMlxfhahXW4&list=PLirko8T4cEmx5eBb1-9j6T6Gl4aBtZ_5x&index=5"> VÍDEO COMPLETO SOBRE POSITION STATIC E RELATIVE</a>
+
+#### Position static e relative
+
+<a href="https://www.youtube.com/watch?v=f8H-wstL0nU&list=PLirko8T4cEmx5eBb1-9j6T6Gl4aBtZ_5x&index=7"> VÍDEO COMPLETO SOBRE POSITION ABSOLUTE</a>
+
+#### Position static e relative
+
+<a href="https://www.youtube.com/watch?v=e41QFmkqaEY&list=PLirko8T4cEmx5eBb1-9j6T6Gl4aBtZ_5x&index=8"> VÍDEO COMPLETO SOBRE POSITION FIXED</a>
+
+#
+
+### RESPONSIVIDADE E MEDIA QUERIE
+
+<a href="https://www.youtube.com/watch?v=H91DhKPjhPk">VÍDEO COMPLETO SOBRE RESPONSIVIDADE</a>
+
+- Uma forma para trabalhar com a responsividade em uma DIV é utilizando % em width e height
+- Para trabalhar com responsividade de DIV dentro de uma DIV vamos usar o alinhamento vertical de position + transform
+- Também conseguimos trabalhar a responsividade de texto com "font-size: 6em" como um exemplo
+
+Layout Fluído: <br>
+
+- `%` // Porcentagem
+- `auto` // Automática
+- `vh` // Viewport height
+- `vw` // Viewport width
+
+Textos Fluídos: <br>
+
+- `em` // Multiplicado pelo pai
+- `rem` // Multiplicado pelo root
+
+#### Media Querie
+
+Vamos usar o "media querie" para poder trabalhar a responsividade da página pelo CSS. <br> <br>
+<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries">Documentação MEDIA QUERIE AQUI</a> <br>
+
+```
+@media screen and (max-width: 630px) {
+    header{
+        font-size: 10px
+    }
+}
+
+@media screen and (max-width: 980px) {
+    header{
+        font-size: 12px
+    }
+}
+<!-- Os "media querie" devem ser sempre do menor para o maior -->
+```
+
+#
+
+### PSEUDO ELEMENTOS
+
+<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements">Documentação AQUI</a>
+
+`::before` // Para modificar antes do conteúdo
+`::after` // Para modificar depois do conteúdo
+`::first-line` // Para modificar a primeira linha
+`::first-letter` // Para modificar a primeira letra
+`::selection` // Para modificar quando selecionado
+`::placeholder` // Para modificar o "placeholder"
+
+```
+<style>
+    #icon li::before{
+        content: ""; <!-- criei um espaço para ser utilizado pelo contúdo a ser adicionado-->
+        display: inline-block; <!-- deixei ele ter algo do lado -->
+
+        width: 25px; <!-- criei o tamanho do espaço -->
+        height: 25px;
+        background-image: url(./imagens/g_icon.png); <!-- inseri uma imagem de fundo -->
+        background-repeat: no-repeat; <!-- a imagem não pode repetir -->
+        background-size: cover; <!-- a imagem tem que cobrir tudo -->
+        transform: translateY(25%); <!-- ajustei a posição da imagem em relação ao eixo y -->
+    }
+</style>
+
+<html>
+<body>
+    <ul id="icon">
+        <li>item 10</li>
+        <li>item 20</li>
+        <li>item 30</li>
+    </ul>
+
+</body>
+</html>
+```
+
+#
+
+### PSEUDO CLASSES
+
+<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes">Documentação AQUI</a>
 
 🚧 _Porjeto EM CONSTRUÇÃO_ 🚧
