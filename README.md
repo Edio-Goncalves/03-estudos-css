@@ -16,13 +16,20 @@
 - [FLOAT](#float)
 - [POSITION](#position-posicionamento-verticalx-e-horizontaly)
 - [RESPONSIVIDADE E MEDIA QUERIE](#responsividade-e-media-querie)
+- [SELETORES](#seletores)
 - [PSEUDO ELEMENTOS](#pseudo-elementos)
+- [PSEUDO CLASSES](#pseudo-classes)
+- [FUNÇÃO CALC](#função-calc)
+- [TRANSFORM](#transform)
+- [VARIAVEL](#variavel)
+- [RESET](#reset)
 
 ### LINKS DE VÍDEO CURSO E DOCUMENTAÇÃO
 
 - <a href="https://www.w3schools.com/cssref/">Documentação CSS w3schools</a>
 - <a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS">Documentação CSS Mozilla developer</a>
 - <a href="https://www.youtube.com/watch?v=5PS6ku8NzIE&list=PLirko8T4cEmx5eBb1-9j6T6Gl4aBtZ_5x"> Vídeo completo sobre display, Float e Position</a>
+- <a href="https://www.youtube.com/watch?v=Gu-IPxZux-w">Vídeo explicativo de todos seletores</a>
 
 #
 
@@ -151,30 +158,30 @@ Exemplo de uma borda com várias espessuras e cores:
 Cada adição de BORDER, PADDING e MARGIN, modifica o tamanho do elemento para fora do elemento e para não modificar o tamanho do elemento com estas adições vamos colocar um `box-sizing: border-box`, onde vai ajustar tudo para dentro do elemento.
 
 ```
-    <style>
-        .container01{ <!-- aqui vamos ter um quadrado de 120px -->
-            padding: 10px;
-            width: 100px;
-            height: 100px;
-            border: 10px solid blue;
-        }
-        .container02{
-            padding: 10px;
-            width: 100px;
-            height: 100px;
-            border: 10px solid blue;
+<style>
+    .container01{ <!-- aqui vamos ter um quadrado de 120px -->
+        padding: 10px;
+        width: 100px;
+        height: 100px;
+        border: 10px solid blue;
+    }
+    .container02{
+        padding: 10px;
+        width: 100px;
+        height: 100px;
+        border: 10px solid blue;
 
-            box-sizing: border-box; <!-- Vai manter os 100px e jogar toda diferença p/ dentro do elemento -->
-        }
-    </style>
+        box-sizing: border-box; <!-- Mantem 100px e jogar toda diferença p/ dentro do elemento -->
+    }
+</style>
 
-    <html>
-    <body>
-        <div class="container01"></div>
-        <div class="container02"></div>
+<html>
+<body>
+    <div class="container01"></div>
+    <div class="container02"></div>
 
-    </body>
-    </html>
+</body>
+</html>
 ```
 
 #
@@ -212,7 +219,7 @@ Cada adição de BORDER, PADDING e MARGIN, modifica o tamanho do elemento para f
 _OBS: sempre que formos usar a forma resumida dos tamanho vamos pensar em sentido horário, topo, direita, inferior e esquerda_
 
 `text-align: center;` // Para centralizar na horizontal, podemos justificar para direita, esquerda, etc.  
-`line-height: 100px;` // Para criar uma linha com altura determinada e centralizar o texto na vertical
+`line-height: 100px;` // Para criar uma linha com altura determinada e centralizar o texto na vertical  
 `text-indent: 30px;` // identa o início de cada paragrafo  
 `letter-spacing: 1.8px;` // espaço entre as letras  
 `word-spacing: 15px;` // espaço entre as palavras  
@@ -368,14 +375,14 @@ Explicação completa de `display:inline-block;` :
 `overflow: hidden;` // ele esconde o excesso e perdemos a informação que esta escondida.  
 `overflow: auto;` // põe um scroll de acordo com a nescessidade, se precisar de scroll para os lados ele também vai por.  
 `overflow: auto;` // coloca o scroll de acordo com a nescessidade  
-`overflow-y: scroll;` // põe scroll no y
+`overflow-y: scroll;` // põe scroll no y  
 `overflow-x: hidden;` // esconde o scroll do x
 
 #
 
 ### FLOAT
 
-<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/float">Documentação AQUI</a> <br>
+<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/float">Documentação AQUI</a> <br> <br>
 <a href="https://www.youtube.com/watch?v=E1tR7sYMEN0&list=PLirko8T4cEmx5eBb1-9j6T6Gl4aBtZ_5x&index=4"> VÍDEO COMPLETO SOBRE FLOAT</a>
 
 - FLOAT: é uma propriedade do display que permite que um lemento fique flutuando ao lado de outro elemento
@@ -446,16 +453,50 @@ Vamos usar o "media querie" para poder trabalhar a responsividade da página pel
 
 #
 
+### SELETORES
+
+<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors">Documentação AQUI</a> <br> <br>
+<a href="https://www.youtube.com/watch?v=Gu-IPxZux-w">VÍDEO EXPLICATIVO DE TODOS SELETORES</a>
+
+Os seletores tem prioridades de importância, se tivermos dois seletores modificando um mesmo elemento ele irá dar prioridade por importância <br>
+
+1. IDs
+2. Classes, attributes e pseudo-classes
+3. Elements e pseudo-elements
+
+<a href="https://specificity.keegan.st/">CALCULADORA DE PRIORIDADE DE SELEÇÃO</a>
+
+Formas de selecionar:
+`*{};` // seletor universal <br>
+` #numb{}` // seleção por "ID" <br>
+` .nome{}` // seleção por "classe" <br>
+`p{};` // seleção por "tag" <br>
+`#head01 p{};` // vai pegar todos os "p" dentro da "ID" <br>
+`#head01 > p{};` // vai selecionar os "p" filhos do "ID" <br>
+`#head01 + p{};` // vai selecionar o primeiro irmão do "p" dentro do "ID", se o próximo elemento não for um "p" ele não pegará <br>
+`#head01 ~ p{};` // irá pegar todos irmãos do "p" dentro da "ID" <br>
+`p[href]` // vai selecionar o "href" dentro do "p", se tiver mais de um "p" com "href" ele vai selecionar <br>
+`[width]{};` // selesionar todos atributos "width" <br>
+`[width="350px"]{};` // selesionar pelo atributo e seu valor <br>
+`[title~="identificador"]{};` // selesionar todos os "title" que tenham a palavra "identificador" <br>
+`[title^="i"]{};` // selesionar todos os "title" que comecem com a letra "i" <br>
+`[title*="i"]{};` // selesionar todos os "title" em qualquer lugar que comece com a letra "i" <br>
+`[title$="0"]{};` // selesionar todos os "title" que terminem com o numero "0" <br>
+
+#
+
 ### PSEUDO ELEMENTOS
 
 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements">Documentação AQUI</a>
 
-`::before` // Para modificar antes do conteúdo
-`::after` // Para modificar depois do conteúdo
-`::first-line` // Para modificar a primeira linha
-`::first-letter` // Para modificar a primeira letra
-`::selection` // Para modificar quando selecionado
-`::placeholder` // Para modificar o "placeholder"
+`::before` // Para modificar antes do conteúdo <br>
+`::after` // Para modificar depois do conteúdo <br>
+`::first-line` // Para modificar a primeira linha <br>
+`::first-letter` // Para modificar a primeira letra <br>
+`::selection` // Para modificar quando selecionado <br>
+`::placeholder` // Para modificar o "placeholder" <br>
+
+Exemplo de como adicionar um icone em uma lista:
 
 ```
 <style>
@@ -488,6 +529,165 @@ Vamos usar o "media querie" para poder trabalhar a responsividade da página pel
 
 ### PSEUDO CLASSES
 
-<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes">Documentação AQUI</a>
+<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes">Documentação AQUI</a> <br> <br>
+
+`:hover{};` // quando passar o mouse sobre o elemento ele aplica a estilização <br>
+`:active{};` // quando clicarmos iremos ativar e a modificação irá ser aplicada <br>
+`:nth-of-type(odd){};` // Para modificar os pares <br>
+`:nth-of-type(even){};` // Para modificar os impares <br>
+`:focus{};` // Põe o foco onde está selesionado <br>
+`:first-of-type{};` // Para modificar o primeiro tipo do imputado <br>
+`:first-child{};` // Para modificar o primeiro filho <br>
+`:nth-child(3){};` // Para modificar a posição escolhida" <br>
+`:nth-of-type(2n){};` // Para modificar de 2 em 2 <br>
+`:nth-of-type(3n + 1){};` // Para modificar de 3 em 3 e também o primeiro <br>
+`:not(:first-child){};` // Para deixar algum elemento de fora, para criar exceção. No exemplo estamos pega tudo menos o primeiro filho do elemento <br>
+
+Exemplo de como adicionar um cores alternadas em uma lista:
+
+```
+<style>
+    #listas li:nth-of-type(odd){   <!-- para pegar os pares -->
+        background-color: beige;
+    }
+    #listas li:nth-of-type(even){   <!-- para pegar os impares -->
+        background-color: gray;
+        color: white;
+    }
+</style>
+
+<html>
+<body>
+        <ul id="listas">
+          <li>Item 0</li>
+          <li>Item 1</li>
+          <li>Item 2</li>
+          <li>Item 3</li>
+        </ul>
+
+</body>
+</html>
+```
+
+#
+
+### FUNÇÃO CALC
+
+<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/calc">Documentação AQUI</a> <br> <br>
+<a href="https://www.youtube.com/watch?v=TZgmjIBmdXc">VÍDEO DE EXEMPLO DE UTILIZAÇÃO </a>
+
+`+` adição <br>
+`-` subtração <br>
+`*` multiplicação. Pelo menos um dos argumentos deve ser um número <br>
+`/` divisão. O operador da direita deve ser um número <br>
+
+Exemplos:
+` width: calc(50% - 20px)` <br>
+` height: calc(33,33% - 2em)` <br>
+
+#
+
+### TRANSFORM
+
+<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform">Documentação AQUI</a>
+
+`transform: rotate(45deg);` // para rotacionar em graus <br>
+`transform: scale(0.5, 0.9);` // para configurar uma escala (1 = 100%) <br>
+`transform: skew(40deg, 20deg);` // para dar direção as pontas <br>
+`transform: rotate(45deg) scale(0.8) skew(-30deg);` // podemos usar mais de um transform
+
+#
+
+### VARIAVEL
+
+<a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS/var">Documentação AQUI</a> <br> <br>
+<a href="https://www.youtube.com/watch?v=hRSi5rYtCj8"> VÍDEO DE EXEMPLO DE COMO USAR VARIÁVEIS</a>
+
+Exemplo de como adicionar um cores alternadas em uma lista:
+
+```
+<style>
+    :root{  <!-- root é o HTML, aqui estamos dizendo para qualquer css ter acesso ao conteúdo -->
+        --var_color_first: red; <!-- aqui criamos uma variável com a cor vermelha -->
+        --var_color_second: blue; <!-- aqui criamos uma variável com a cor azul -->
+
+        --square-size: 100px; <!-- aqui criamos uma variavel com um size -->
+    }
+
+.p2{
+    color: var(--var_color_first); <!-- aqui puxamos a variável e aplicamos onde queremos -->
+    font-size: 25px;
+}
+.p3{
+    color: var(--var_color_second);  <!-- aqui puxamos a variavel e aplicamos onde queremos -->
+    font-size: 15px;
+}
+.sqr01{
+    width: var(--square-size);
+    height: var(--square-size);
+    background-color: black;
+}
+
+<!-- podendo modificar sempre que quiser e tendo o efeito aplicado no elemento que utilizou a variável -->
+
+```
+
+#
+
+### RESET
+
+<a href="https://meyerweb.com/eric/tools/css/reset/">Documentação AQUI</a> <br> <br>
+<a href="https://www.youtube.com/watch?v=23G_3ODk5mY">VÍDEO EXPLICATIVO DO RESET</a>
+
+```
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+```
 
 🚧 _Porjeto EM CONSTRUÇÃO_ 🚧
