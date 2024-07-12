@@ -116,12 +116,18 @@ Criamos um novo arquivo chamado "style.css" onde linkamos ao nosso head para ser
 `border-width: 1px;` // para dar espessura para a borda  
 `border-style: solid;` // linha solida na borda  
 `border-color: blue;` // colorir a borda  
+`border-color: transparent;` // deixa a borda transparente, bom para usar com o ":hover"  
 `border-radius: 10px;` // para suavizar a borda (arrendodar)  
 `border-style: dotted;` // borda pontilhada  
 `border-style: dashed;` // borda tracejada  
 `border-style: none;` // aqui a borda é retirada  
 `border-style: hidden;` // o elemento está na tela mas não esta aparecendo na página  
-`border: 20px dashed red;` // Para criar uma borda de forma simples <br><br>
+`border: 20px dashed red;` // Para criar uma borda de forma simples  
+`border-image-source: url();` // Para colocar uma imagem na borda  
+`border-image-width: 50px;` // Para criar o tamanho da largura onde vai entrar a imagem  
+`border-image-slice: 30%;` // Para setar o recorte  
+`border-image-outset: 50px;` // Para ajustar a margem da borda ao elemento para fora ou para dentro  
+`border-image-repeat: round;` // Para mostrar a forma dos intervalos <br><br>  
 Exemplo de uma borda com várias espessuras e cores:
 
 ```
@@ -155,11 +161,14 @@ Exemplo de uma borda com várias espessuras e cores:
 
 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model">Documentação AQUI</a>
 
+`box-sizing: content-box` // quebra o layout, estoura o tamanho do elemento, soma o tamanho do elemento e sua margin, padding e border
+`box-sizing: border-box` // nao quebra o layout, limita o tamanho pela dimensão do elemento, jogar toda diferença para dentro do elemento
+
 Cada adição de BORDER, PADDING e MARGIN, modifica o tamanho do elemento para fora do elemento e para não modificar o tamanho do elemento com estas adições vamos colocar um `box-sizing: border-box`, onde vai ajustar tudo para dentro do elemento.
 
 ```
 <style>
-    .container01{ <!-- aqui vamos ter um quadrado de 120px -->
+    .container01{ <!-- aqui vamos ter um quadrado de 120px, 100px doelemento + 10px da borda + 10px do padding -->
         padding: 10px;
         width: 100px;
         height: 100px;
@@ -203,11 +212,11 @@ Cada adição de BORDER, PADDING e MARGIN, modifica o tamanho do elemento para f
 
 `font-size: 4em;` valor de "em" é multiplicado pelo valor do elemento "pai"  
 `font-size: 1rem;` valor de "rem" é multiplicado pelo valor do elemento "raiz"  
-`width: 50vw;` unidade de medida em relção a modificação da largura da janela do html  
-`width: 50vh;` unidade de medida em relção a modificação da altura da janela do html, porem o efeito é na largura  
-`width: 50vmin` unidade de medida em relção ao menor tamanho da janela do html sendo altura ou largura  
+`width: 50vw;` unidade de medida em relção a modificação da largura da janela do html
+`width: 50vh;` unidade de medida em relção a modificação da altura da janela do html
+`width: 50vmin` unidade de medida em relção ao menor tamanho da janela do html sendo altura ou largura
 `width: 40vmax;` unidade de medida em relção ao maior tamanho da janela do html sendo altura ou largura  
-`width: 80%` unidade de medida em relção ao elemento "pai" baseando-se na %
+`width: 80%` ocupa a % de toda a area disponivel do elemento pai, levando em consideração margin
 
 #
 
@@ -366,6 +375,48 @@ Explicação completa de `display:block;` :
 Explicação completa de `display:inline-block;` :
 <a href="https://www.youtube.com/watch?v=Yj9-N9BEVeM">Aprenda a display: inline-block;</a>
 
+#### Display flex
+
+Trabalhamos com coluna OU linha
+
+<a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox">Documentação "display:flex" e "display:inline-flex";</a>
+<a href="https://www.youtube.com/watch?v=WyIiuB8NoqQ">FLEX BOX COMPLETO;</a>
+
+`display:flex;` // para setar o comportamento de exibição dos elementos filhos, ele possibilita trabalhar em flex direction, podendo mudar o comportamento em coluna, linha, direção e espaçamento.
+`display:inline-flex;` // trabalha da mesma forma que o "display:flex" com os filhos mas muda o comportamento do container, fica igual o "display:inline"
+`flex-wrap:nowrap;` // para efetuar ou nao efetuar quebra de linha (nowrap, wrap, wrap-reverse)
+`flex:1 1 2;` // Define a proporsão dos itens dentro do container
+`flex-direction:row;` // é o padrão do "display:flex", os lementos ficam em linha  
+`flex-direction:row-reverse;` // para inverter a ordem dos elmentos e o inicio dos elementos  
+`flex-direction:column;` // para colocar os elementos em coluna  
+`flex-direction:column-reverse;` // para inverter a ordem dos elmentos e o inicio dos elementos
+`justify-content: center;` // alinha todos os itens no eixo principal (flex-start, flex-end, space-between, space-around, stretch, space-evenly)
+`align-items: center;` // alinha todos itens no eixo transversal (flex-start, flex-end, stretch, baseline)
+`align-self: center;` // alinha individualmente no eixo transversal
+`align-content: center;` // define a distribuição entre os items do conteúdo do eixo transversal
+
+#### Display grid
+
+Trabalhamos com coluna E linha
+
+<a href="https://www.youtube.com/watch?v=lh0qB15vRoo">YT - GRID COMPLETO;</a>
+<a href="https://www.youtube.com/watch?v=q_WV9exilhk&list=PLYgzkrmJnLwpeeGgdADYq3cE2yUwLLTOv">YT - GRID DETALHADO;</a>
+
+`display:grid;` // para criar um grid
+`grid-template-columns: 1fr 1fr 1fr;` // para criar colunas no grid de forma explicita, podemos usar função "repeat" e "minmax" para construir o grid
+`grid-template-rows: repeat(4, 1fr);` // para criar linhas no grid de forma explicita, podemos usar função "repeat" e "minmax" para construir o grid
+`grid-column-gap: 5px;` // para modificar a distancia apenas das colunas do grid
+`grid-row-gap: 5px;` // para modificar a distancia apenas das linhas do grid
+`grid-gap: 10px;` // para modificar a distancia entre as linhas e colunas do grid
+`grid-auto-rows: 100px ;` // para setar o tamanha das linha implicitas, qualquer novo elemento adicionado
+`grid-auto-columns: 100px ;` // para setar o tamanha das colunas implicitas, qualquer novo elemento adicionado
+`align-items: strech;` // (start, center, end, strech)
+`justify-items: strech;` // (start, center, end, strech)
+`align-self: strech;` // Usa-se no proprio item e nao no container do grid (start, center, end, strech)
+`grid-column: 1 / -1;` // usamos para setar o inicio e o fim da coluna do elemento em relação ao grid
+`grid-row: 1 / 3;` // usamos para setar o inicio e o fim da linha do elemento em relação ao grid
+`grid-template-area: "header header aside aside";` // usamos para setar todo o template do grid baseado em identificadores, criando um mapa de coordenadas
+
 #
 
 ### OVERFLOW
@@ -374,9 +425,17 @@ Explicação completa de `display:inline-block;` :
 
 `overflow: hidden;` // ele esconde o excesso e perdemos a informação que esta escondida.  
 `overflow: auto;` // põe um scroll de acordo com a nescessidade, se precisar de scroll para os lados ele também vai por.  
-`overflow: auto;` // coloca o scroll de acordo com a nescessidade  
 `overflow-y: scroll;` // põe scroll no y  
 `overflow-x: hidden;` // esconde o scroll do x
+
+#
+
+### OUTROS
+
+`resize: both;` // para conseguir redimensionar uma elemento, igual o textarea (none, horizontal, vertical, etc.)
+`z-index: 2;` // "(OBS: position" não pode ser "staick") é para organizar as camadas na perspectiva de visualização do usuario
+`order: 0;` // vamos usar para ordenar a posição dos elementos
+`cursor: auto;` // vamos usar para mudar o cursor
 
 #
 
@@ -421,10 +480,10 @@ Explicação completa de `display:inline-block;` :
 
 Layout Fluído: <br>
 
-- `%` // Porcentagem
+- `%` // Porcentagem (pega toda area disponivel do pai,)
 - `auto` // Automática
 - `vh` // Viewport height
-- `vw` // Viewport width
+- `vw` // Viewport width (pega em relação a janela, ele vai ignorar margin, cuidado ao usar)
 
 Textos Fluídos: <br>
 

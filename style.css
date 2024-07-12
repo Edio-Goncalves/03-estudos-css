@@ -1,690 +1,781 @@
-.separador{
-    text-align: left;
-    font-size: 22px;
-    padding: 5px;
-    padding-left: 30px;
-    color: white;
-    background-color: blue;
+.separador {
+  text-align: left;
+  font-size: 22px;
+  padding: 5px;
+  padding-left: 30px;
+  color: white;
+  background-color: blue;
 }
-h2{
-    background-color:bisque;
-    max-width:max-content;
-padding: 5px;
+h2 {
+  background-color: bisque;
+  max-width: max-content;
+  padding: 5px;
 }
-.container2{
-    padding: 10px;
-    width: 100px;
-    height: 100px;
-    background-color: rgb(208, 255, 0);
-    border: 10px solid blue;
+.container2 {
+  padding: 10px;
+  width: 100px;
+  height: 100px;
+  background-color: rgb(208, 255, 0);
+  border: 10px solid blue;
 }
-.container3{
-    padding: 10px;
-    width: 100px;
-    height: 100px;
-    background-color: rgb(208, 255, 0);
-    border: 10px solid blue;
+.container3 {
+  padding: 10px;
+  width: 100px;
+  height: 100px;
+  background-color: rgb(208, 255, 0);
+  border: 10px solid blue;
 
-    box-sizing: border-box; /* Vai manter os 150px e vai jogar toda diferença de padding, margin e border para dentro do elemento */
+  box-sizing: border-box; /* Vai manter os 150px e vai jogar toda diferença de padding, margin e border para dentro do elemento */
 }
-.center{
-    color: red;
-    text-align: center; /* Para centralizar, podemos justificar por a direita, esquerda, etc */
-    text-decoration: underline; /* linha em baixo */
-    letter-spacing: 1.8px; /* espaço entre as letras */
+.center {
+  color: red;
+  text-align: center; /* Para centralizar, podemos justificar por a direita, esquerda, etc */
+  text-decoration: underline; /* linha em baixo */
+  letter-spacing: 1.8px; /* espaço entre as letras */
 }
-.justify{
-    text-align: justify;
-    text-decoration: line-through; /* riscado */
-    line-height: 30px; /* altura da linha fixada em pixels*/
+.justify {
+  text-align: justify;
+  text-decoration: line-through; /* riscado */
+  line-height: 30px; /* altura da linha fixada em pixels*/
 }
-.uppercase{
-    text-transform: uppercase;
-    text-decoration: overline; /* linha em cima */
-    line-height: 1.8; /* altura da linha multiplicando pelo tamanho da fonte */
+.uppercase {
+  text-transform: uppercase;
+  text-decoration: overline; /* linha em cima */
+  line-height: 1.8; /* altura da linha multiplicando pelo tamanho da fonte */
 }
-.lowercase{
-    text-transform: lowercase; /* todo em caixa alta */
-    text-decoration: underline overline; /* da para aplicar mais de um text-decoration */
-    word-spacing: 15px; /* espaço entre as palavras */
+.lowercase {
+  text-transform: lowercase; /* todo em caixa alta */
+  text-decoration: underline overline; /* da para aplicar mais de um text-decoration */
+  word-spacing: 15px; /* espaço entre as palavras */
 }
-.capitalize{
-    text-transform: capitalize; /* para por toda primeira letra de cada palavra em maiuscula*/
-    text-shadow: 2px 2px 5px black; /* deslocamento para direita, deslocamento para baixo, desfoque e cor */
+.capitalize {
+  text-transform: capitalize; /* para por toda primeira letra de cada palavra em maiuscula*/
+  text-shadow: 2px 2px 5px black; /* deslocamento para direita, deslocamento para baixo, desfoque e cor */
 }
-.indent{
-    text-indent: 30px; /* identa o inicio de cada paragrafo */
+.indent {
+  text-indent: 30px; /* identa o inicio de cada paragrafo */
 }
-.link{
-    text-decoration: none;
+.link {
+  text-decoration: none;
 }
-.fontSerif{ /* cantos das fontes com pontas */
-    font-family: 'Times New Roman', Times, serif;
-    font-style: italic; /* Deixar a fonte em italico */
+.fontSerif {
+  /* cantos das fontes com pontas */
+  font-family: "Times New Roman", Times, serif;
+  font-style: italic; /* Deixar a fonte em italico */
 }
-.fontSansSerif{ /* fonte lizas, arredondadas */
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 22px; /* mudar tamanho da fonte e podemos usar todas unidades de medidas nela */
+.fontSansSerif {
+  /* fonte lizas, arredondadas */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 22px; /* mudar tamanho da fonte e podemos usar todas unidades de medidas nela */
 }
-.fontMonoSpace{ /* fonte onde todos os caracteres ocupam o mesmo espaço */
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: bold; /* colocar em negrito, podemos colocar em valor par aestar modificando o negrito, ex: "font-weight: 500;"  */
+.fontMonoSpace {
+  /* fonte onde todos os caracteres ocupam o mesmo espaço */
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bold; /* colocar em negrito, podemos colocar em valor par aestar modificando o negrito, ex: "font-weight: 500;"  */
 }
-.fontVariant{
-    font-size: 22px;
-    font-variant: small-caps; /* Coloca todas as letras em caixa alta mas respeita a letra maiuscula digitada */
+.fontVariant {
+  font-size: 22px;
+  font-variant: small-caps; /* Coloca todas as letras em caixa alta mas respeita a letra maiuscula digitada */
 }
-#cm{
-    background-color: aqua;
-    width: 1cm;
-    height: 1cm;
-    display: inline-block;
+#cm {
+  background-color: aqua;
+  width: 1cm;
+  height: 1cm;
+  display: inline-block;
 }
-#mm{
-    background-color: rgb(0, 255, 0);
-    width: 5mm;
-    height: 5mm;
-    display: inline-block;
+#mm {
+  background-color: rgb(0, 255, 0);
+  width: 5mm;
+  height: 5mm;
+  display: inline-block;
 }
-#in{
-    background-color: rgb(55, 0, 255);
-    width: 1in;
-    height: 1in;
-    display: inline-block;
+#in {
+  background-color: rgb(55, 0, 255);
+  width: 1in;
+  height: 1in;
+  display: inline-block;
 }
-#px{
-    background-color: aqua;
-    width: 10px;
-    height: 10px;
-    display: inline-block;
+#px {
+  background-color: aqua;
+  width: 10px;
+  height: 10px;
+  display: inline-block;
 }
-#pt{
-    background-color: aqua;
-    width: 10pt;
-    height: 10pt;
-    display: inline-block;
+#pt {
+  background-color: aqua;
+  width: 10pt;
+  height: 10pt;
+  display: inline-block;
 }
-#pc{
-    background-color: aqua;
-    width: 1pc;
-    height: 1pc;
-    display: inline-block;
+#pc {
+  background-color: aqua;
+  width: 1pc;
+  height: 1pc;
+  display: inline-block;
 }
-.container{
-    font-size: 25px;
+.container {
+  font-size: 25px;
 
-    width: 300px;
-    background: rgb(243, 133, 133);
+  width: 300px;
+  background: rgb(243, 133, 133);
 }
-.inside{ 
-    font-size: 0.5em;
+.inside {
+  font-size: 0.5em;
 
-    width: 200px;
-    background: rgb(32, 77, 224);
+  width: 200px;
+  background: rgb(32, 77, 224);
 }
-.inside_em{ /* em = tamanho do elemento fonte (elemento pai), 2 "em" duplica, 3 "em" triplica ... */
-    font-size: 2em; /* O valor de "em" é multiplicado pelo valor do font-size do "pai" do elemento */
+.inside_em {
+  /* em = tamanho do elemento fonte (elemento pai), 2 "em" duplica, 3 "em" triplica ... */
+  font-size: 2em; /* O valor de "em" é multiplicado pelo valor do font-size do "pai" do elemento */
 
-    width: 4em; /* unidade "em" é sempre relacionada ao tamanho da font-size do "pai" */
-    background:blue; /* tamanho do background: 25px (font-size pai) * 2em (font-size filho) * 6em (width filho) = 200px*/
+  width: 4em; /* unidade "em" é sempre relacionada ao tamanho da font-size do "pai" */
+  background: blue; /* tamanho do background: 25px (font-size pai) * 2em (font-size filho) * 6em (width filho) = 200px*/
 }
-.inside_rem{ /* rem = tamanho do elemento raiz (do HTML inteiro), 2 "em" duplica, 3 "em" triplica ... */
-    font-size: 1rem; /* O valor de "rem" é multiplicado pelo valor do font-size da "raiz" do elemento */
+.inside_rem {
+  /* rem = tamanho do elemento raiz (do HTML inteiro), 2 "em" duplica, 3 "em" triplica ... */
+  font-size: 1rem; /* O valor de "rem" é multiplicado pelo valor do font-size da "raiz" do elemento */
 }
-.container_vw{ /* unidade de medida em relção a modificação da largura da janela do html */
-    font-size: 30px;
+.container_vw {
+  /* unidade de medida em relção a modificação da largura da janela do html */
+  font-size: 30px;
 
-    width: 50vw;
-    background: rgb(243, 133, 133);
+  width: 50vw;
+  background: rgb(243, 133, 133);
 }
-.container_vh{ /* unidade de medida em relção a modificação da altura da janela do html, porem o efeito é na largura */
-    font-size: 20px;
+.container_vh {
+  /* unidade de medida em relção a modificação da altura da janela do html, porem o efeito é na largura */
+  font-size: 20px;
 
-    width: 50vh;
-    background: rgb(243, 133, 133);
+  width: 50vh;
+  background: rgb(243, 133, 133);
 }
-.container_vmin{/* unidade de medida em relção ao menor tamanho da janela do html sendo altura ou largura */
-    font-size: 20px;
+.container_vmin {
+  /* unidade de medida em relção ao menor tamanho da janela do html sendo altura ou largura */
+  font-size: 20px;
 
-    width: 50vmin;
-    background: rgb(243, 133, 133);
+  width: 50vmin;
+  background: rgb(243, 133, 133);
 }
-.container_vmax{/* unidade de medida em relção ao maior tamanho da janela do html sendo altura ou largura */
-    font-size: 20px;
+.container_vmax {
+  /* unidade de medida em relção ao maior tamanho da janela do html sendo altura ou largura */
+  font-size: 20px;
 
-    width: 40vmax;
-    background: rgb(243, 133, 133);
+  width: 40vmax;
+  background: rgb(243, 133, 133);
 }
-.container_porcento{/* unidade de medida em relção ao elemento "pai" baseando-se na % (neste exemplo o elemento pai é o body) */
-    font-size: 20px;
+.container_porcento {
+  /* unidade de medida em relção ao elemento "pai" baseando-se na % (neste exemplo o elemento pai é o body) */
+  font-size: 20px;
 
-    width: 80%;
-    height: 50%;
-    background: rgb(243, 133, 133);
+  width: 80%;
+  height: 50%;
+  background: rgb(243, 133, 133);
 }
-b{
-    color: rgb(236, 34, 34);
+b {
+  color: rgb(236, 34, 34);
 }
-.paragrafoInline p{
-        display: inline;
+.paragrafoInline p {
+  display: inline;
 }
-.link{
-    text-decoration: none; /* tirar o sublinhado do link*/
-    color: red;
-    cursor: all-scroll; /* mudar o cursor */
-    padding: 10px; /* mudar o padding de todos */
-    padding-bottom: 5px; /* mudar apenas o de baixo, no caso ele substitui o 10px por 5px */
-    border-radius: 10px;
-    border: 3px solid red;
+.link {
+  text-decoration: none; /* tirar o sublinhado do link*/
+  color: red;
+  cursor: all-scroll; /* mudar o cursor */
+  padding: 10px; /* mudar o padding de todos */
+  padding-bottom: 5px; /* mudar apenas o de baixo, no caso ele substitui o 10px por 5px */
+  border-radius: 10px;
+  border: 3px solid red;
 }
-.link:visited{
-    color: black; /* para colorir o link apos ser visitado */
+.link:visited {
+  color: black; /* para colorir o link apos ser visitado */
 }
-.link2{
-    text-decoration: none; /* tirar o sublinhado do link*/
-    color: red;
-    cursor: all-scroll; /* mudar o cursor */
-    padding: 10px; /* mudar o padding de todos */
-    padding-bottom: 5px; /* mudar apenas o de baixo, no caso ele substitui o 10px por 5px */
-    border-radius: 10px;
-    border: 3px solid red;
+.link2 {
+  text-decoration: none; /* tirar o sublinhado do link*/
+  color: red;
+  cursor: all-scroll; /* mudar o cursor */
+  padding: 10px; /* mudar o padding de todos */
+  padding-bottom: 5px; /* mudar apenas o de baixo, no caso ele substitui o 10px por 5px */
+  border-radius: 10px;
+  border: 3px solid red;
 }
-.link2:hover{
-    background-color: yellow; /* quando ponho o mouse em cima ele muda a cor */
-    color: black;
+.link2:hover {
+  background-color: yellow; /* quando ponho o mouse em cima ele muda a cor */
+  color: black;
 }
-.link3{
-    text-decoration: none; /* tirar o sublinhado do link*/
-    color: red;
-    cursor: all-scroll; /* mudar o cursor */
-    padding: 10px; /* mudar o padding de todos */
-    padding-bottom: 5px; /* mudar apenas o de baixo, no caso ele substitui o 10px por 5px */
-    border-radius: 10px;
-    border: 3px solid red;
+.link3 {
+  text-decoration: none; /* tirar o sublinhado do link*/
+  color: red;
+  cursor: all-scroll; /* mudar o cursor */
+  padding: 10px; /* mudar o padding de todos */
+  padding-bottom: 5px; /* mudar apenas o de baixo, no caso ele substitui o 10px por 5px */
+  border-radius: 10px;
+  border: 3px solid red;
 }
-.link3:active{
-    background-color: yellow; /* quando clica o link modifica de acordo com o determinado */
-    color: black;
+.link3:active {
+  background-color: yellow; /* quando clica o link modifica de acordo com o determinado */
+  color: black;
 }
-.listUl{
-    list-style-type: none; /* retirar a parte identificador defaul do elemento */
+.listUl {
+  list-style-type: none; /* retirar a parte identificador defaul do elemento */
 }
-.listUrl{
-    list-style-image: url(./imagens/s.jpg); /* inserir imagem */
-    background-color: rgb(227, 205, 247);
+.listUrl {
+  list-style-image: url(./imagens/s.jpg); /* inserir imagem */
+  background-color: rgb(227, 205, 247);
 }
-.liPadrao{
-    margin-bottom:  3px;
-    background-color: aqua;
-    border: 1px solid; /* para por as bordas das linhas */
+.liPadrao {
+  margin-bottom: 3px;
+  background-color: aqua;
+  border: 1px solid; /* para por as bordas das linhas */
 }
-.liDentro{
-    border: 1px solid; /* para por as bordas das linhas */
-    list-style-position: inside; /* Joga o simbolo para drentro da linha */
+.liDentro {
+  border: 1px solid; /* para por as bordas das linhas */
+  list-style-position: inside; /* Joga o simbolo para drentro da linha */
 }
-.obs{
-    font-size: 20px;
-    color: red;
+.obs {
+  font-size: 20px;
+  color: red;
 }
-.divPai{
-    padding: 15px;
-    background-color: bisque;
+.divPai {
+  padding: 15px;
+  background-color: bisque;
 }
-.divNormal{
-    background-color: aqua;
+.divNormal {
+  background-color: aqua;
 }
-.divFora{
-    width: 500px;
-    background-color: yellow;
+.divFora {
+  width: 500px;
+  background-color: yellow;
 }
-.divDentro{
-    width: 300px;
-    height: 50px;
-    background-color: red;
+.divDentro {
+  width: 300px;
+  height: 50px;
+  background-color: red;
 }
-.paragrafoDiv{
-    display: inline;
-    background-color: aqua;
+.paragrafoDiv {
+  display: inline;
+  background-color: aqua;
 }
-.divParagrafo{
-    display: inline-block;
-    background-color: rgb(73, 73, 243);
+.divParagrafo {
+  display: inline-block;
+  background-color: rgb(73, 73, 243);
 }
-span{
-    background-color: cadetblue;
+span {
+  background-color: cadetblue;
 }
-.paragrafoSpan{
-    background-color: rgb(248, 123, 123);
+.paragrafoSpan {
+  background-color: rgb(248, 123, 123);
 }
-.displayNone{
-    display: none;
+.displayNone {
+  display: none;
 }
-.visibilityHidden{
-    visibility: hidden;
+.visibilityHidden {
+  visibility: hidden;
 }
-.container010{
-    color: rgb(255, 153, 0);
-    width: 285px;
-    height: 100px;
-    background-color: blue;
+.container010 {
+  color: rgb(255, 153, 0);
+  width: 285px;
+  height: 100px;
+  background-color: blue;
 }
-.container020{
-    color: rgb(255, 153, 0);
-    width: 285px;
-    height: 100px;
-    background-color: blue;
+.container020 {
+  color: rgb(255, 153, 0);
+  width: 285px;
+  height: 100px;
+  background-color: blue;
 
-    overflow: hidden;
+  overflow: hidden;
 }
-.container030{
-    color: rgb(255, 153, 0);
-    width: 285px;
-    height: 100px;
-    background-color: blue;
+.container030 {
+  color: rgb(255, 153, 0);
+  width: 285px;
+  height: 100px;
+  background-color: blue;
 
-    overflow: auto;
+  overflow: auto;
 }
-.container040{
-    color: rgb(255, 153, 0);
-    width: 285px;
-    height: 100px;
-    background-color: blue;
+.container040 {
+  color: rgb(255, 153, 0);
+  width: 285px;
+  height: 100px;
+  background-color: blue;
 
-    overflow-y: scroll;
-    overflow-x: hidden;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
-.quadrado{
-    height: 50px;
-    width: 50px;
-    background-color: red;
+.quadrado {
+  height: 50px;
+  width: 50px;
+  background-color: red;
 
-    margin: auto; /* para centralizar */
+  margin: auto; /* para centralizar */
 }
-.quadrado1{
-    height: 50px;
-    width: 50px;
-    background-color: red;
+.quadrado1 {
+  height: 50px;
+  width: 50px;
+  background-color: red;
 
-    margin-left: auto; /* para prender na direita */
+  margin-left: auto; /* para prender na direita */
 }
-.quadrado2{
-    height: 50px;
-    width: 50px;
-    background-color: red;
+.quadrado2 {
+  height: 50px;
+  width: 50px;
+  background-color: red;
 
-    margin-right: auto; /* para prender na esquerda*/
+  margin-right: auto; /* para prender na esquerda*/
 }
-.imagem{
-    width: 150px;
+.imagem {
+  width: 150px;
 
-    display: block; /*transformar a imagem em "display:block" e depois usar o "margin: auto", "margin-left: auto" ou "margin-right: auto" */
-    margin: auto;
+  display: block; /*transformar a imagem em "display:block" e depois usar o "margin: auto", "margin-left: auto" ou "margin-right: auto" */
+  margin: auto;
 }
-.imagem1{
-    width: 150px;
+.imagem1 {
+  width: 150px;
 
-    text-align: center;
+  text-align: center;
 }
-.quadrado00{
-    height: 100px;
-    width: 100px;
-    display: inline-block; /* para permitir que tenha outro elemento ao seu lado */
+.quadrado00 {
+  height: 100px;
+  width: 100px;
+  display: inline-block; /* para permitir que tenha outro elemento ao seu lado */
 }
-.quadrado100{
-    height: 100px;
-    width: 100px;
+.quadrado100 {
+  height: 100px;
+  width: 100px;
 }
-.quadrado300{
-    height: 30px;
-    width: 30px;
-    margin: 3px;
+.quadrado300 {
+  height: 30px;
+  width: 30px;
+  margin: 3px;
 }
-.retangulo{
-    height: 200px;
-    width: 75px;
+.retangulo {
+  height: 200px;
+  width: 75px;
 
-    overflow: auto;
+  overflow: auto;
 }
-.red{
-    background-color: red;
+.red {
+  background-color: red;
 }
-.green{
-    background-color: green;
+.green {
+  background-color: green;
 }
-.yellow{
-    background-color: yellow;
+.yellow {
+  background-color: yellow;
 }
-.blue{
-    background-color: aqua;
+.blue {
+  background-color: aqua;
 }
-.pink{
-    background-color: pink
+.pink {
+  background-color: pink;
 }
-.pStatic{
-    position: static;
+.pStatic {
+  position: static;
 }
-.pRelative{
-    position: relative; /* vamos poder usar top, botton, left, right para poder modificar a posição a partir no local original do elemento */
-    left: 50px;
+.pRelative {
+  position: relative; /* vamos poder usar top, botton, left, right para poder modificar a posição a partir no local original do elemento */
+  left: 50px;
 }
-.pFixed{
-    position: fixed;
-    top: 350px; /* vai ficar a 330px do topo da pagina */
-    right: 20px; /* vai ficar a 20px do lado direito da pagina */
+.pFixed {
+  position: fixed;
+  top: 350px; /* vai ficar a 330px do topo da pagina */
+  right: 20px; /* vai ficar a 20px do lado direito da pagina */
 }
-.pAbsolute{
-    position: absolute; /*vai posicionar em referencia ao pai do elemento desde que nao seja POSITION: STATIC e se nao tiver pai vai ser ao body */
-    left: 70px;
-    top: 20px;
+.pAbsolute {
+  position: absolute; /*vai posicionar em referencia ao pai do elemento desde que nao seja POSITION: STATIC e se nao tiver pai vai ser ao body */
+  left: 70px;
+  top: 20px;
 }
-.pStiky{
-    position: sticky;
-    top: 2px;
-    background-color: brown;
+.pStiky {
+  position: sticky;
+  top: 2px;
+  background-color: brown;
 }
-.displayInline{
-    display: inline;
+.displayInline {
+  display: inline;
 }
-.floatLeft{
-    float: left;
+.floatLeft {
+  float: left;
 }
-.floatRight{
-    float: right;
+.floatRight {
+  float: right;
 }
-.clearLeft{
-    clear: left;
+.clearLeft {
+  clear: left;
 }
-.container011{
-    border: 1px solid black;
-    overflow: auto;
-    margin-bottom: 5px;
+.container011 {
+  border: 1px solid black;
+  overflow: auto;
+  margin-bottom: 5px;
 }
-.container022{
-    border: 1px solid black;
+.container022 {
+  border: 1px solid black;
 }
-.font{
-    font-size: 20px;
-    color: brown;
-    margin-bottom: 25px;
+.font {
+  font-size: 20px;
+  color: brown;
+  margin-bottom: 25px;
 }
-.card{
-    float: left; /* para colocar um card ao lado do outro */
-    width: 300px;
-    height: 160px;
-    border: 2px solid black;
-    text-align: center; /* para centralizar horizontalmente tudo o que tem dentro dos cards */
+.card {
+  float: left; /* para colocar um card ao lado do outro */
+  width: 300px;
+  height: 160px;
+  border: 2px solid black;
+  text-align: center; /* para centralizar horizontalmente tudo o que tem dentro dos cards */
 
-    position: relative;
+  position: relative;
 }
-.c1{
-    background-color: aqua;
-    line-height: 160px; /* aqui estou dizendo que o .c1 vai ter a mesma altura do pai (.card) e vai por a linha no centro*/
+.c1 {
+  background-color: aqua;
+  line-height: 160px; /* aqui estou dizendo que o .c1 vai ter a mesma altura do pai (.card) e vai por a linha no centro*/
 }
-.c2{
+.c2 {
+  position: absolute; /* para funcionar precisamos que o pai nao seja "position: statick" */
+  width: 200px; /* para dar tamanho ao elemento */
+  top: 50%; /* adicionar 50% do valor do pai entre o elemento e o topo */
+  left: 50%; /* adicionar 50% do valor do pai entre o elemento a esquerda*/
+  transform: translate(
+    -50%,
+    -50%
+  ); /* ajustar o eixo central do elemento dentro do pai, no caso posicionando a 50% do y e 50% do x (centralizando em relaçºao ao pai) */
 
-    position: absolute; /* para funcionar precisamos que o pai nao seja "position: statick" */
-    width: 200px; /* para dar tamanho ao elemento */
-    top: 50%; /* adicionar 50% do valor do pai entre o elemento e o topo */
-    left: 50%; /* adicionar 50% do valor do pai entre o elemento a esquerda*/
-    transform: translate(-50%, -50%); /* ajustar o eixo central do elemento dentro do pai, no caso posicionando a 50% do y e 50% do x (centralizando em relaçºao ao pai) */
+  background-color: palegoldenrod;
+}
+.headerx {
+  height: 130px;
+  width: 80%;
+  margin: auto;
+  background-color: antiquewhite;
 
-    background-color: palegoldenrod;
+  position: relative;
 }
-.headerx{
-    height: 130px;
-    width: 80%;
-    margin: auto;
-    background-color: antiquewhite;
+.header2x {
+  position: absolute;
+  background-color: aquamarine;
 
-    position: relative;
-
+  width: 75%; /* tamanho em relação ao elemento pai */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
-.header2x{
-    position: absolute;
-    background-color: aquamarine;
-
-    width: 75%; /* tamanho em relação ao elemento pai */
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.fontVw {
+  font-size: 4vw;
+  text-align: center;
 }
-.fontVw{
-    font-size: 4vw;
-    text-align: center;
+.ss {
+  float: none;
 }
-.ss{
-    float: none;
+.menu123 {
+  padding: 0px; /* para retirar o padding default do "ul" */
+  margin: 0px; /* para retirar a margin default do "ul" */
+  float: right; /* para jogar o conteudo da "class menu" para a direita ou seja o "ul"*/
 }
-.menu123{
-    padding: 0px; /* para retirar o padding default do "ul" */
-    margin: 0px; /* para retirar a margin default do "ul" */
-    float: right; /* para jogar o conteudo da "class menu" para a direita ou seja o "ul"*/
+.container123 {
+  overflow: hidden;
+  margin: auto; /* Para centralizar o conteudo da "class container" */
+  width: 80%; /* para ficar responsivo em 80% da janela */
+  background-color: gray;
+  padding: 15px;
+  font-size: 18px;
 }
-.container123{
-    overflow: hidden;
-    margin: auto; /* Para centralizar o conteudo da "class container" */
-    width: 80%; /* para ficar responsivo em 80% da janela */
-    background-color: gray;
-    padding: 15px;
-    font-size: 18px;
+ul.menu123 {
+  list-style: none;
 }
-ul.menu123{
-    list-style: none;
+.menu123 li {
+  display: inline-block; /* para os itens do "li" poderem ficar na mesma linha de outro elemento */
+  color: white;
+  margin-right: 15px; /* para dar uma distancia de um iten do "li" do outro */
 }
-.menu123 li{
-    display: inline-block; /* para os itens do "li" poderem ficar na mesma linha de outro elemento */
-    color: white;
-    margin-right: 15px; /* para dar uma distancia de um iten do "li" do outro */
+.logo123 {
+  float: left; /* para jogar o conteudo da "class logo" para a esquerda */
+  color: white;
 }
-.logo123{
-    float: left; /* para jogar o conteudo da "class logo" para a esquerda */
-    color: white;
-}
-
 
 @media screen and (max-width: 830px) {
-    .logo123{
-        float: none;
-        text-align: center;
+  .logo123 {
+    float: none;
+    text-align: center;
 
-        padding: 10px;
-        border: 2px solid rgb(145, 50, 50);
-    }
-    .menu123{
-        float: none;
-        text-align: center;
-        margin-top: 10px;
-        border: 2px solid rgb(158, 58, 58);
-    }
-    .menu123 li{
-        float: none;
-        display: block;
-        padding: 10px;
-        margin: 3px;
-        border: 2px solid rgb(51, 189, 63);
-    }
-
+    padding: 10px;
+    border: 2px solid rgb(145, 50, 50);
+  }
+  .menu123 {
+    float: none;
+    text-align: center;
+    margin-top: 10px;
+    border: 2px solid rgb(158, 58, 58);
+  }
+  .menu123 li {
+    float: none;
+    display: block;
+    padding: 10px;
+    margin: 3px;
+    border: 2px solid rgb(51, 189, 63);
+  }
 }
 
 @media screen and (max-width: 630px) {
-    .logo123{
-        float: none;
-        text-align: center;
-        padding: 10px;
-        border: 2px solid rgb(114, 114, 114);
-    }
-    .menu123{
-        float: none;
-        text-align: center;
-        margin-top: 10px;
-        border: 2px solid rgb(252, 174, 174);
-    }
-    .menu123 li{
-        float: none;
-        display: block;
-        padding: 10px;
-        margin: 3px;
-        border: 2px solid rgb(114, 114, 114);
-    }
+  .logo123 {
+    float: none;
+    text-align: center;
+    padding: 10px;
+    border: 2px solid rgb(114, 114, 114);
+  }
+  .menu123 {
+    float: none;
+    text-align: center;
+    margin-top: 10px;
+    border: 2px solid rgb(252, 174, 174);
+  }
+  .menu123 li {
+    float: none;
+    display: block;
+    padding: 10px;
+    margin: 3px;
+    border: 2px solid rgb(114, 114, 114);
+  }
+}
+.pseudoP::first-line {
+  /* para mudar o style da primeira linha independente da responsividade */
+  color: red;
+}
+.pseudoP::first-letter {
+  /* para mudar o style da primeira letra */
+  color: rgb(0, 26, 255);
+  font-size: 30px;
+}
+.pseudoP::selection {
+  /* quando selecionar parte do texto ele modifica background e color */
+  background-color: yellowgreen;
+  color: orangered;
+}
+#antes li,
+#icon li {
+  list-style: none;
+}
+#antes li::before {
+  content: "A ";
+  color: blueviolet;
+  font-size: 20px;
+}
+#icon li::before {
+  content: ""; /* criei um espaço */
+  display: inline-block; /* deixei ele ter algo do lado */
 
+  width: 25px; /* criei o tamanho do espaço */
+  height: 25px;
+  background-image: url(./imagens/g_icon.png); /* inseri uma imagem de fundo */
+  background-repeat: no-repeat; /* a imagem nao pode repetir */
+  background-size: cover; /* a imagem tem que cobrir tudo */
+  transform: translateY(
+    25%
+  ); /* ajustei a posição da imagem em relação ao eixo y */
 }
-.pseudoP::first-line{ /* para mudar o style da primeira linha independente da responsividade */
-    color: red;
+#head01 p {
+  /* vai pegar todos os "p" dentro da ID */
+  color: red;
 }
-.pseudoP::first-letter{ /* para mudar o style da primeira letra */
-    color: rgb(0, 26, 255);
-    font-size: 30px;
+#head01 > p {
+  /* vai pegar os "p" onde o ID é o pai do elemento */
+  background-color: aqua;
 }
-.pseudoP::selection{ /* quando selecionar parte do texto ele modifica background e color */
-    background-color: yellowgreen;
-    color: orangered;
+#head01 + p {
+  /* vai pegar o primeiro "p" do proximo lemento que esta logo apos o elemento ID "head01", se o proximo elemento nao for um "p" ele nao pegaria */
+  background-color: bisque;
 }
-#antes li, #icon li{
-    list-style: none;
+#head01 ~ p {
+  /* vao pegar todos os "p" apos o ID "head01"*/
+  color: brown;
 }
-#antes li::before{
-    content: "A ";
-    color: blueviolet;
-    font-size: 20px;
+[width] {
+  /* selesionar pelo atributo */
+  background-color: yellow;
 }
-#icon li::before{
-    content: ""; /* criei um espaço */
-    display: inline-block; /* deixei ele ter algo do lado */
+[width="350px"] {
+  /* selesionar pelo atributo e seu valor*/
+  font-size: 28px;
+}
+[title~="identificador"] {
+  /* selesionar todos os title tenham a palavra "identificador"*/
+  color: blue;
+}
+[title^="i"] {
+  /* selesionar todos os title que comecem com a letra "i" */
+  background-color: blanchedalmond;
+  width: 350px;
+}
+[title*="i"] {
+  /* selesionar todos os title em qualquer lugar que comece com a letra "i" */
+  font-size: 28px;
+}
+[title$="0"] {
+  /* selesionar todos os title que terminem com o numero "0" */
+  color: orangered;
+}
+#listas {
+  margin: 0px;
+  padding: 0px;
+}
+#listas li {
+  list-style: none;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 22px;
+  color: black;
+  width: 350px;
+}
+#listas li:nth-of-type(odd) {
+  /* para pegar os pares */
+  background-color: beige;
+}
+#listas li:nth-of-type(even) {
+  /* para pegar os impares */
+  background-color: gray;
+  color: white;
+}
+#inp input:focus {
+  /* poe em foco onde esta selecionado */
+  color: red;
+}
+#list li:first-of-type {
+  /* o primeiro tipo "li" de cada lista vai ficar azul */
+  color: red;
+}
+#list li:first-child {
+  /* se for o primeiro filho ele muda a cor */
+  color: blue;
+}
+#list li:nth-child(3) {
+  /* para escolher a posição */
+  color: rgb(0, 255, 13);
+}
+#list li:nth-of-type(4) {
+  /* vai pegar a posição do tipo */
+  color: palevioletred;
+}
+.container321 {
+  width: 100%;
+  background-color: aqua;
+}
+.primeira {
+  margin-right: -4px;
+  margin-bottom: -4px;
+  display: inline-block; /* par ater um objeto ao seu lado */
+  width: calc(
+    100% - 300px
+  ); /* para calcular o width dos objetos lado a lado de forma responsiva */
+  height: 300px;
+  background-color: yellow;
+}
+.segunda {
+  margin-right: -4px;
+  margin-bottom: -4px;
+  display: inline-block; /* o line block desconpença as margens, mas podemos corrigir */
+  width: 300px;
+  height: 300px;
+  background-color: green;
+}
+.terceira {
+  width: calc(100% - 200px); /* uma forma de fixar espaçamentos laterais */
+  height: 100px;
+  margin: auto;
+  background-color: red;
+}
+.img01 {
+  transform: rotate(45deg);
+}
+.img02 {
+  transform: scale(0.5, 0.9); /* horizontal e vertical */
+}
+.img03 {
+  transform: skew(40deg, 20deg); /* horizontal e vertical */
+}
+.divVermelha {
+  margin-left: 20px;
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  transform: rotate(45deg) scale(0.8) skew(-30deg);
+}
+:root {
+  /* root é o HTML */
+  --var_color: red; /* aqui criamos uma variavel com a cor vermelha */
 
-    width: 25px; /* criei o tamanho do espaço */
-    height: 25px;
-    background-image: url(./imagens/g_icon.png); /* inseri uma imagem de fundo */
-    background-repeat: no-repeat; /* a imagem nao pode repetir */
-    background-size: cover; /* a imagem tem que cobrir tudo */
-    transform: translateY(25%); /* ajustei a posição da imagem em relação ao eixo y */
+  --square-size: 100px; /* aqui criamos uma variavel com um size, podendo modificar sempre que quiser e tendo o efeito aplicado no elemento que utilizou a variavel */
 }
-#head01 p{ /* vai pegar todos os "p" dentro da ID */
-    color: red;
+.p2 {
+  color: var(
+    --var_color
+  ); /* aqui puxamos a variavel e aplicamos onde queremos */
+  font-size: 25px;
 }
-#head01 > p{ /* vai pegar os "p" onde o ID é o pai do elemento */
-    background-color: aqua;
+.p3 {
+  color: var(
+    --var_color
+  ); /* aqui puxamos a variavel e aplicamos onde queremos */
+  font-size: 15px;
 }
-#head01 + p{ /* vai pegar o primeiro "p" do proximo lemento que esta logo apos o elemento ID "head01", se o proximo elemento nao for um "p" ele nao pegaria */
-    background-color: bisque;
+.sqr01 {
+  width: var(--square-size);
+  height: var(--square-size);
+  background-color: black;
 }
-#head01 ~ p{ /* vao pegar todos os "p" apos o ID "head01"*/
-    color: brown;
-}
-[width]{ /* selesionar pelo atributo */
-    background-color: yellow;
-}
-[width="350px"]{ /* selesionar pelo atributo e seu valor*/
-    font-size: 28px;
-}
-[title~="identificador"]{ /* selesionar todos os title tenham a palavra "identificador"*/
-    color: blue;
-}
-[title^="i"]{ /* selesionar todos os title que comecem com a letra "i" */
-    background-color: blanchedalmond;
-    width: 350px;
-}
-[title*="i"]{ /* selesionar todos os title em qualquer lugar que comece com a letra "i" */
-    font-size: 28px;
-}
-[title$="0"]{ /* selesionar todos os title que terminem com o numero "0" */
-    color: orangered;
-}
-#listas{
-    margin: 0px;
-    padding: 0px;
-}
-#listas li{
-    list-style: none;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 22px;
-    color: black;
-    width: 350px;
-}
-#listas li:nth-of-type(odd){ /* para pegar os pares */
-    background-color: beige;
-}
-#listas li:nth-of-type(even){ /* para pegar os impares */
-    background-color: gray;
-    color: white;
-}
-#inp input:focus{ /* poe em foco onde esta selecionado */
-    color: red;
-}
-#list li:first-of-type{ /* o primeiro tipo "li" de cada lista vai ficar azul */
-    color: red;
-}
-#list li:first-child{ /* se for o primeiro filho ele muda a cor */
-    color: blue;
-}
-#list li:nth-child(3){ /* para escolher a posição */
-    color: rgb(0, 255, 13);
-}
-#list li:nth-of-type(4){ /* vai pegar a posição do tipo */
-    color: palevioletred;
-}
-.container321{
-    width: 100%;
-    background-color: aqua;
-}
-.primeira{
-    margin-right: -4px;
-    margin-bottom: -4px;
-    display: inline-block; /* par ater um objeto ao seu lado */
-    width: calc(100% - 300px); /* para calcular o width dos objetos lado a lado de forma responsiva */
-    height: 300px;
-    background-color: yellow;
-}
-.segunda{
-    margin-right: -4px;
-    margin-bottom: -4px;
-    display: inline-block; /* o line block desconpença as margens, mas podemos corrigir */
-    width: 300px;
-    height: 300px;
-    background-color: green;
-}
-.terceira{
-    width: calc(100% - 200px); /* uma forma de fixar espaçamentos laterais */
-    height: 100px;
-    margin: auto;
-    background-color: red;
-}
-.img01{
-    transform: rotate(45deg);
-}
-.img02{
-    transform: scale(0.5, 0.9); /* horizontal e vertical */
-}
-.img03{
-    transform: skew(40deg, 20deg); /* horizontal e vertical */
-}
-.divVermelha{
-    margin-left: 20px;
-    width: 100px;
-    height: 100px;
-    background-color: red;
-    transform: rotate(45deg) scale(0.8) skew(-30deg);
-}
-:root{ /* root é o HTML */
-    --var_color: red; /* aqui criamos uma variavel com a cor vermelha */
-
-    --square-size: 100px; /* aqui criamos uma variavel com um size, podendo modificar sempre que quiser e tendo o efeito aplicado no elemento que utilizou a variavel */
-}
-.p2{
-    color: var(--var_color); /* aqui puxamos a variavel e aplicamos onde queremos */
-    font-size: 25px;
-}
-.p3{
-    color: var(--var_color); /* aqui puxamos a variavel e aplicamos onde queremos */
-    font-size: 15px;
-}
-.sqr01{
-    width: var(--square-size);
-    height: var(--square-size);
-    background-color: black;
-}
-.sqr02{
-    width: var(--square-size);
-    height: var(--square-size);
-    background-color: red;
+.sqr02 {
+  width: var(--square-size);
+  height: var(--square-size);
+  background-color: red;
 }
 
+.gridteste {
+  display: grid;
+  grid-gap: 0.5em;
+  height: 100vh;
+  margin: 0 auto;
+  max-width: 1200px;
+
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "headergrid"
+    "maingrid"
+    "asidegrid1"
+    "asidegrid2"
+    "asidegrid3"
+    "footergrid";
+}
+
+@media (min-width: 48em) {
+  .gridteste {
+    grid-template-columns: 1fr repeat(4, minmax(auto, 200px)) 1fr;
+    grid-template-rows: 0.5fr 2fr 0.5fr 0.5fr;
+    grid-template-areas:
+      "headergrid headergrid  headergrid  headergrid headergrid headergrid"
+      " . maingrid maingrid maingrid asidegrid1 ."
+      " . asidegrid2 asidegrid2 asidegrid3 asidegrid3 ."
+      "footergrid footergrid footergrid footergrid footergrid footergrid";
+  }
+}
+
+.headergrid {
+  background-color: aqua;
+  grid-area: headergrid;
+}
+.maingrid {
+  background-color: rgb(173, 173, 46);
+  grid-area: maingrid;
+}
+.asidegrid1 {
+  background-color: brown;
+  grid-area: asidegrid1;
+}
+.asidegrid2 {
+  background-color: chocolate;
+  grid-area: asidegrid2;
+}
+.asidegrid3 {
+  background-color: chocolate;
+  grid-area: asidegrid3;
+}
+.footergrid {
+  background-color: aqua;
+  grid-area: footergrid;
+}
