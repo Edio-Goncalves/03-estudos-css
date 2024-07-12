@@ -399,7 +399,7 @@ Trabalhamos com coluna OU linha
 
 Trabalhamos com coluna E linha
 
-<a href="https://www.youtube.com/watch?v=lh0qB15vRoo">YT - GRID COMPLETO;</a>
+<a href="https://www.youtube.com/watch?v=lh0qB15vRoo">YT - GRID COMPLETO;</a>  
 <a href="https://www.youtube.com/watch?v=q_WV9exilhk&list=PLYgzkrmJnLwpeeGgdADYq3cE2yUwLLTOv">YT - GRID DETALHADO;</a>
 
 `display:grid;` // para criar um grid  
