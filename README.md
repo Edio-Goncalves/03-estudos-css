@@ -382,18 +382,18 @@ Trabalhamos com coluna OU linha
 <a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox">Documentação "display:flex" e "display:inline-flex";</a>
 <a href="https://www.youtube.com/watch?v=WyIiuB8NoqQ">FLEX BOX COMPLETO;</a>
 
-`display:flex;` // para setar o comportamento de exibição dos elementos filhos, ele possibilita trabalhar em flex direction, podendo mudar o comportamento em coluna, linha, direção e espaçamento.
-`display:inline-flex;` // trabalha da mesma forma que o "display:flex" com os filhos mas muda o comportamento do container, fica igual o "display:inline"
-`flex-wrap:nowrap;` // para efetuar ou nao efetuar quebra de linha (nowrap, wrap, wrap-reverse)
-`flex:1 1 2;` // Define a proporsão dos itens dentro do container
+`display:flex;` // para setar o comportamento de exibição dos elementos filhos, ele possibilita trabalhar em flex direction, podendo mudar o comportamento em coluna, linha, direção e espaçamento.  
+`display:inline-flex;` // trabalha da mesma forma que o "display:flex" com os filhos mas muda o comportamento do container, fica igual o "display:inline"  
+`flex-wrap:nowrap;` // para efetuar ou nao efetuar quebra de linha (nowrap, wrap, wrap-reverse)  
+`flex:1 1 2;` // Define a proporsão dos itens dentro do container  
 `flex-direction:row;` // é o padrão do "display:flex", os lementos ficam em linha  
 `flex-direction:row-reverse;` // para inverter a ordem dos elmentos e o inicio dos elementos  
 `flex-direction:column;` // para colocar os elementos em coluna  
-`flex-direction:column-reverse;` // para inverter a ordem dos elmentos e o inicio dos elementos
-`justify-content: center;` // alinha todos os itens no eixo principal (flex-start, flex-end, space-between, space-around, stretch, space-evenly)
-`align-items: center;` // alinha todos itens no eixo transversal (flex-start, flex-end, stretch, baseline)
-`align-self: center;` // alinha individualmente no eixo transversal
-`align-content: center;` // define a distribuição entre os items do conteúdo do eixo transversal
+`flex-direction:column-reverse;` // para inverter a ordem dos elmentos e o inicio dos elementos  
+`justify-content: center;` // alinha todos os itens no eixo principal (flex-start, flex-end, space-between, space-around, stretch, space-evenly)  
+`align-items: center;` // alinha todos itens no eixo transversal (flex-start, flex-end, stretch, baseline)  
+`align-self: center;` // alinha individualmente no eixo transversal  
+`align-content: center;` // define a distribuição entre os items do conteúdo do eixo transversal  
 
 #### Display grid
 
@@ -402,20 +402,20 @@ Trabalhamos com coluna E linha
 <a href="https://www.youtube.com/watch?v=lh0qB15vRoo">YT - GRID COMPLETO;</a>
 <a href="https://www.youtube.com/watch?v=q_WV9exilhk&list=PLYgzkrmJnLwpeeGgdADYq3cE2yUwLLTOv">YT - GRID DETALHADO;</a>
 
-`display:grid;` // para criar um grid
-`grid-template-columns: 1fr 1fr 1fr;` // para criar colunas no grid de forma explicita, podemos usar função "repeat" e "minmax" para construir o grid
-`grid-template-rows: repeat(4, 1fr);` // para criar linhas no grid de forma explicita, podemos usar função "repeat" e "minmax" para construir o grid
-`grid-column-gap: 5px;` // para modificar a distancia apenas das colunas do grid
-`grid-row-gap: 5px;` // para modificar a distancia apenas das linhas do grid
-`grid-gap: 10px;` // para modificar a distancia entre as linhas e colunas do grid
-`grid-auto-rows: 100px ;` // para setar o tamanha das linha implicitas, qualquer novo elemento adicionado
-`grid-auto-columns: 100px ;` // para setar o tamanha das colunas implicitas, qualquer novo elemento adicionado
-`align-items: strech;` // (start, center, end, strech)
-`justify-items: strech;` // (start, center, end, strech)
-`align-self: strech;` // Usa-se no proprio item e nao no container do grid (start, center, end, strech)
-`grid-column: 1 / -1;` // usamos para setar o inicio e o fim da coluna do elemento em relação ao grid
-`grid-row: 1 / 3;` // usamos para setar o inicio e o fim da linha do elemento em relação ao grid
-`grid-template-area: "header header aside aside";` // usamos para setar todo o template do grid baseado em identificadores, criando um mapa de coordenadas
+`display:grid;` // para criar um grid  
+`grid-template-columns: 1fr 1fr 1fr;` // para criar colunas no grid de forma explicita, podemos usar função "repeat" e "minmax" para construir o grid  
+`grid-template-rows: repeat(4, 1fr);` // para criar linhas no grid de forma explicita, podemos usar função "repeat" e "minmax" para construir o grid  
+`grid-column-gap: 5px;` // para modificar a distancia apenas das colunas do grid  
+`grid-row-gap: 5px;` // para modificar a distancia apenas das linhas do grid  
+`grid-gap: 10px;` // para modificar a distancia entre as linhas e colunas do grid  
+`grid-auto-rows: 100px ;` // para setar o tamanha das linha implicitas, qualquer novo elemento adicionado  
+`grid-auto-columns: 100px ;` // para setar o tamanha das colunas implicitas, qualquer novo elemento adicionado  
+`align-items: strech;` // (start, center, end, strech)  
+`justify-items: strech;` // (start, center, end, strech)  
+`align-self: strech;` // Usa-se no proprio item e nao no container do grid (start, center, end, strech)  
+`grid-column: 1 / -1;` // usamos para setar o inicio e o fim da coluna do elemento em relação ao grid  
+`grid-row: 1 / 3;` // usamos para setar o inicio e o fim da linha do elemento em relação ao grid  
+`grid-template-area: "header header aside aside";` // usamos para setar todo o template do grid baseado em identificadores, criando um mapa de coordenadas  
 
 #
 
@@ -426,16 +426,16 @@ Trabalhamos com coluna E linha
 `overflow: hidden;` // ele esconde o excesso e perdemos a informação que esta escondida.  
 `overflow: auto;` // põe um scroll de acordo com a nescessidade, se precisar de scroll para os lados ele também vai por.  
 `overflow-y: scroll;` // põe scroll no y  
-`overflow-x: hidden;` // esconde o scroll do x
+`overflow-x: hidden;` // esconde o scroll do x  
 
 #
 
 ### OUTROS
 
-`resize: both;` // para conseguir redimensionar uma elemento, igual o textarea (none, horizontal, vertical, etc.)
-`z-index: 2;` // "(OBS: position" não pode ser "staick") é para organizar as camadas na perspectiva de visualização do usuario
-`order: 0;` // vamos usar para ordenar a posição dos elementos
-`cursor: auto;` // vamos usar para mudar o cursor
+`resize: both;` // para conseguir redimensionar uma elemento, igual o textarea (none, horizontal, vertical, etc.)  
+`z-index: 2;` // "(OBS: position" não pode ser "staick") é para organizar as camadas na perspectiva de visualização do usuario  
+`order: 0;` // vamos usar para ordenar a posição dos elementos  
+`cursor: auto;` // vamos usar para mudar o cursor  
 
 #
 
@@ -444,11 +444,11 @@ Trabalhamos com coluna E linha
 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/float">Documentação AQUI</a> <br> <br>
 <a href="https://www.youtube.com/watch?v=E1tR7sYMEN0&list=PLirko8T4cEmx5eBb1-9j6T6Gl4aBtZ_5x&index=4"> VÍDEO COMPLETO SOBRE FLOAT</a>
 
-- FLOAT: é uma propriedade do display que permite que um lemento fique flutuando ao lado de outro elemento
-- ele sempre cria um novo contexto então pode estar escondendo um elemento porem nunca fica sobre um conteúdo
-- o "pai" que está guardando o elemento que está flutuando perde a largura e altura e a forma de corrigir é setar um `overflow: hidden` no elemento "pai"
-- se os elementos que estão com o "float" não cabem mais na tela eles caem automaticamente um para baixo do outro
-- quando não queremos que o próximo elemento fique atrás ou ao lado do elemento com o "float" vamos setar um `clear:;` no elemento para ele ir para um novo contexto
+- FLOAT: é uma propriedade do display que permite que um lemento fique flutuando ao lado de outro elemento  
+- ele sempre cria um novo contexto então pode estar escondendo um elemento porem nunca fica sobre um conteúdo  
+- o "pai" que está guardando o elemento que está flutuando perde a largura e altura e a forma de corrigir é setar um `overflow: hidden` no elemento "pai"  
+- se os elementos que estão com o "float" não cabem mais na tela eles caem automaticamente um para baixo do outro  
+- quando não queremos que o próximo elemento fique atrás ou ao lado do elemento com o "float" vamos setar um `clear:;` no elemento para ele ir para um novo contexto  
 
 #
 
@@ -474,16 +474,16 @@ Trabalhamos com coluna E linha
 
 <a href="https://www.youtube.com/watch?v=H91DhKPjhPk">VÍDEO COMPLETO SOBRE RESPONSIVIDADE</a>
 
-- Uma forma para trabalhar com a responsividade em uma DIV é utilizando % em width e height
-- Para trabalhar com responsividade de DIV dentro de uma DIV vamos usar o alinhamento vertical de position + transform
-- Também conseguimos trabalhar a responsividade de texto com "font-size: 6em" como um exemplo
+- Uma forma para trabalhar com a responsividade em uma DIV é utilizando % em width e height  
+- Para trabalhar com responsividade de DIV dentro de uma DIV vamos usar o alinhamento vertical de position + transform  
+- Também conseguimos trabalhar a responsividade de texto com "font-size: 6em" como um exemplo  
 
 Layout Fluído: <br>
 
-- `%` // Porcentagem (pega toda area disponivel do pai,)
-- `auto` // Automática
-- `vh` // Viewport height
-- `vw` // Viewport width (pega em relação a janela, ele vai ignorar margin, cuidado ao usar)
+- `%` // Porcentagem (pega toda area disponivel do pai,)  
+- `auto` // Automática  
+- `vh` // Viewport height  
+- `vw` // Viewport width (pega em relação a janela, ele vai ignorar margin, cuidado ao usar)  
 
 Textos Fluídos: <br>
 
