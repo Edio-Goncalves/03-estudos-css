@@ -379,7 +379,7 @@ Explicação completa de `display:inline-block;` :
 
 Trabalhamos com coluna OU linha
 
-<a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox">Documentação "display:flex" e "display:inline-flex";</a>
+<a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox">Documentação "display:flex" e "display:inline-flex";</a>  
 <a href="https://www.youtube.com/watch?v=WyIiuB8NoqQ">FLEX BOX COMPLETO;</a>
 
 `display:flex;` // para setar o comportamento de exibição dos elementos filhos, ele possibilita trabalhar em flex direction, podendo mudar o comportamento em coluna, linha, direção e espaçamento.  
