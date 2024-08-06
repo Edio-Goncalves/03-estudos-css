@@ -1,5 +1,7 @@
 # 03-estudos-css
 
+Este repositório contém todos os recursos, exemplos e notas que compilei enquanto aprendia CSS. Meu objetivo é fornecer uma referência útil e prática a partir do que aprendi e documentar meu próprio progresso.
+
 ### ÍNDICE
 
 - [CSS INLINE, INTERNO e EXTERNO](#css-inline-interno-e-externo)
@@ -460,11 +462,11 @@ Trabalhamos com coluna E linha
 
 <a href="https://www.youtube.com/watch?v=pMlxfhahXW4&list=PLirko8T4cEmx5eBb1-9j6T6Gl4aBtZ_5x&index=5"> VÍDEO COMPLETO SOBRE POSITION STATIC E RELATIVE</a>
 
-#### Position static e relative
+#### Position absolute
 
 <a href="https://www.youtube.com/watch?v=f8H-wstL0nU&list=PLirko8T4cEmx5eBb1-9j6T6Gl4aBtZ_5x&index=7"> VÍDEO COMPLETO SOBRE POSITION ABSOLUTE</a>
 
-#### Position static e relative
+#### Position fixed
 
 <a href="https://www.youtube.com/watch?v=e41QFmkqaEY&list=PLirko8T4cEmx5eBb1-9j6T6Gl4aBtZ_5x&index=8"> VÍDEO COMPLETO SOBRE POSITION FIXED</a>
 
