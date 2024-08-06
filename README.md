@@ -462,11 +462,11 @@ Trabalhamos com coluna E linha
 
 <a href="https://www.youtube.com/watch?v=pMlxfhahXW4&list=PLirko8T4cEmx5eBb1-9j6T6Gl4aBtZ_5x&index=5"> VÍDEO COMPLETO SOBRE POSITION STATIC E RELATIVE</a>
 
-#### Position static e relative
+#### Position absolute
 
 <a href="https://www.youtube.com/watch?v=f8H-wstL0nU&list=PLirko8T4cEmx5eBb1-9j6T6Gl4aBtZ_5x&index=7"> VÍDEO COMPLETO SOBRE POSITION ABSOLUTE</a>
 
-#### Position static e relative
+#### Position fixed
 
 <a href="https://www.youtube.com/watch?v=e41QFmkqaEY&list=PLirko8T4cEmx5eBb1-9j6T6Gl4aBtZ_5x&index=8"> VÍDEO COMPLETO SOBRE POSITION FIXED</a>
 
