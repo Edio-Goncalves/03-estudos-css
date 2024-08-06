@@ -1,5 +1,7 @@
 # 03-estudos-css
 
+Este repositório contém todos os recursos, exemplos e notas que compilei enquanto aprendia CSS. Meu objetivo é fornecer uma referência útil e prática a partir do que aprendi e documentar meu próprio progresso.
+
 ### ÍNDICE
 
 - [CSS INLINE, INTERNO e EXTERNO](#css-inline-interno-e-externo)
